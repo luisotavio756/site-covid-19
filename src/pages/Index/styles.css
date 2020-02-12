@@ -1,0 +1,23 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 2000px;
+    /* background-color: red; */
+}
+
+.scroll-top {
+    padding: 5px 7px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 120px;
+
+    position: absolute;
+    z-index: 99999999999;
+    bottom: 15px;
+    right: 15px;
+
+    cursor: pointer;
+    display: none;
+}

@@ -1,0 +1,90 @@
+.container-section {
+    max-width: 997px;
+    height: auto;
+    /* background-color: red; */
+    margin: auto auto;
+    /* display: flex; */
+    /* padding: 20px 30px; */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#section-2 .col-12 {
+    /* background-image: url; */
+    background-image: linear-gradient(#fff, #333), url('../../assets/img/parallax.jpg');
+	background-blend-mode: multiply;
+	/* filter: blur(1px); */
+	/* Set a specific height */
+	/* min-height: 100vh;  */
+	
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    padding: 3rem 0;
+}
+
+#section-2 .card {
+    /* border: 1px solid #fff;
+    border-radius: 10px; */
+    border-radius: 10px;
+    padding: 10px 15px;
+    transition: all 0.4s linear;
+    cursor: pointer;
+}
+
+#section-2 .card:hover {
+    box-shadow: 0 0px 30px 0 rgb(104, 104, 104);
+}
+
+#section-2 .card .card-title{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    /* align-self: center; */
+}
+
+#section-2 .card .card-title h1{
+    letter-spacing: 2px;
+    font-weight: normal;
+    /* align-self: center; */
+}
+
+#section-2 .card .card-img{
+    color: #fff;
+    width: 80%;
+    margin: auto auto;
+    margin-top: 10px;
+}
+
+#section-2 .card .card-desc{
+    text-align: justify;
+    color: #999;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.attach {
+    margin-top: 20px;
+    text-align: end;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.attach h2{
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.attach h2:hover{
+    opacity: 0.9;
+    text-decoration: underline;
+}
+
+.attach h2:after {
+    content: ' \2192';
+}
