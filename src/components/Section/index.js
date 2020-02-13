@@ -10,7 +10,7 @@ export default function Section() {
                     <div className="col-4">
                         <div className="card">
                             <div className="card-img">
-                                <img src="https://dummyimage.com/600x400/000/fff" class="img-fluid"/>
+                                <img src="https://dummyimage.com/600x400/000/fff" className="img-fluid"/>
                             </div>
                             <div className="card-title">
                                 <h1>Cursos</h1>
@@ -23,7 +23,7 @@ export default function Section() {
                     <div className="col-4">
                         <div className="card">
                             <div className="card-img">
-                                <img src="https://dummyimage.com/600x400/000/fff" class="img-fluid"/>
+                                <img src="https://dummyimage.com/600x400/000/fff" className="img-fluid"/>
                             </div>
                             <div className="card-title">
                                 <h1>Soluções</h1>
@@ -36,7 +36,7 @@ export default function Section() {
                     <div className="col-4">
                         <div className="card">
                             <div className="card-img">
-                                <img src="https://dummyimage.com/600x400/000/fff" class="img-fluid"/>
+                                <img src="https://dummyimage.com/600x400/000/fff" className="img-fluid"/>
                             </div>
                             <div className="card-title">
                                 <h1>Assistência</h1>

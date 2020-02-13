@@ -12,7 +12,7 @@ export default function QuemSomos() {
                 <button type="button" className="btn">Quero fazer parte</button>
             </div>
             <div className="col-5">
-                <img src="https://dummyimage.com/600x400/000/fff" class="img-fluid"/>
+                <img src="https://dummyimage.com/600x400/000/fff" className="img-fluid"/>
             </div>
         </div>
         

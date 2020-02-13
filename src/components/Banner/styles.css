@@ -33,11 +33,12 @@
     left: 100px;
     top: 260px; */
     max-width: 700px;
-    margin-left: 4vw;
+    padding: 0 4vw;
     color: white;
 }
 
 .text h1{
+    /* text-align: justify; */
     font-size: 52px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -45,13 +46,49 @@
 }
 
 .text p{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: justify;
     letter-spacing: 1px;
     color: #999 !important;
+    font-size: 1.2rem;
+}
+
+.text button, .text button:focus, .text button:visited, .text button:active{
+    margin-top: 10px;
+    height: 56px;
+    text-decoration: none;
+    /* padding-left: 50px !important; */
+
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+    border: none !important;
+    color:#fff !important;
+    background-color: #b20710;
+    font-size: 1.3rem;
+    font-weight: normal;
+    border-radius: 60px !important;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.text button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
 }
 
 @media screen and (max-width: 790px) {
     .text h1{
         font-size: 36px;
-        /* font-weight: bold; */
+    }
+
+    .text p {
+        text-align: left;
+        /* display: none; */
+    }
+    
+    .text button {
+        font-weight: bold !important;
+        width: 100% !important;
     }
 }
