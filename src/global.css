@@ -123,5 +123,10 @@ html, body {
     /* flex-direction: row; */
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 
 

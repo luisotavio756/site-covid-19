@@ -14,7 +14,7 @@
 .navbar .nav-brand {
     display: flex;
     margin: 0 auto;
-    max-width: 997px;
+    max-width: 1100px;
     padding:  1rem 4vw;
 
     align-items: center;
@@ -41,6 +41,39 @@
 .navbar .nav-brand .brand .logo {
     padding-right: 15px;
     border-right: 1px solid #999;
+}
+
+.navbar .nav-brand .social {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar .nav-brand .social svg {
+    font-size: 18px !important;
+    margin: 0 7px;
+}
+
+.navbar .nav-brand .social a:last-child {
+    margin-left: 5px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 6px 24px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.3s linear;
+}
+
+.navbar .nav-brand .social a:hover {
+    /* color: red; */
+    opacity: 0.9;
+    /* box-shadow: 0 0px 16px 1px gray; */
+}
+
+.navbar .nav-brand .social a:last-child:hover {
+    /* color: red; */
+    /* opacity: 0.9; */
+    box-shadow: 0 0px 16px 1px gray;
 }
 
 .navbar .nav-brand .brand .logo img{

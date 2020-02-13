@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faCertificate } from '@fortawesome/free-solid-svg-icons'
-// import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import Logo from '../../assets/img/kadoo.png';
 
 import './styles.css';
@@ -11,7 +11,7 @@ export default function Navbar() {
     useEffect(() => {
         document.querySelectorAll('li.dropdown').forEach(item => {
             item.addEventListener('click', async () => {
-                if(item.querySelector('.dropdown-content').offsetHeight == 0) {
+                if(item.querySelector('.dropdown-content').offsetHeight === 0) {
                     let height = () => {
                         item.querySelector('.dropdown-content').style.opacity = '1';
                     };
@@ -61,9 +61,16 @@ export default function Navbar() {
                     </h4>
                 </div>
                 <div className="social">
-                    {/* <FontAwesomeIcon icon={faFacebook} /> */}
-                    <FontAwesomeIcon icon={faBars} />
-                    <FontAwesomeIcon icon={faBars} />
+                    <a href="#face">
+                        <FontAwesomeIcon icon={faFacebook}/>
+                    </a>
+                    <a href="#insta">
+                        <FontAwesomeIcon icon={faInstagram}/>  
+                    </a>
+                    <a href="#linke">
+                        <FontAwesomeIcon icon={faLinkedin}/>
+                    </a>
+                    <a href="#">Login</a>
                 </div>
                 <div className="menu-expand" onClick={openNav}>
                     <FontAwesomeIcon icon={faBars} />
