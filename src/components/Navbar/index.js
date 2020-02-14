@@ -41,8 +41,9 @@ export default function Navbar() {
     async function closeNav(e) {
         var fade = () => {
             e.style.opacity = '0';
-            document.querySelector(".nav-menu ul").style.opacity = '0';
+            // document.querySelector(".nav-menu ul").style.opacity = '0';
         }
+
         await fade();
 
         document.querySelector(".nav-menu").style.width = '0';
@@ -80,13 +81,7 @@ export default function Navbar() {
             <div className="nav-menu">
                 <ul>
                     <li className="active">Home</li>
-                    <li className="dropdown">Programas &#9662;
-                        <ul className="dropdown-content">
-                            <li>Kadoo.hub</li>
-                            <li>Kadoo.lab</li>
-                            <li>Kadoo.hack</li>
-                        </ul>
-                    </li>
+                    <li>Kadoo.hub</li>
                     <li>Eventos</li>
                     <li>Jobs</li>
                     <li>Blog</li>

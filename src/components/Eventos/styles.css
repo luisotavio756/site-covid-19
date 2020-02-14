@@ -1,0 +1,9 @@
+#section-4 {
+    background-color: #E5E6F0;
+}
+
+#section-4 .col-12 {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: red;
+}

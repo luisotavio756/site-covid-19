@@ -4,15 +4,30 @@
     padding: 4rem 0;
 }
 
+#section-1 .col-7{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
 #section-1 h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
     letter-spacing: 1px;
+    text-align: justify;
     /* color: #333; */
 }
 
 
+/* #section-1 h1 span{
+    font-size: 2.2rem;
+    color: #b20710;
+} */
+
+
 #section-1 p {
+    text-align: justify;
     font-size: 1rem;
     color: #999;
     /* letter-spacing: 1px; */
@@ -20,12 +35,19 @@
 
 #section-1 button {
     margin-top: 5px;
-    border: 1px solid #333;
-    /* color: #333; */
+    border: 2px solid #b20710;
+    color: #b20710;
 }
 
 #section-1 .img {
     background-color: red;
+}
+
+#section-1 .divider {
+    height: 4px;
+    border-radius: 50px;
+    width: 20%;
+    background-color: #b20710;
 }
 
 @media (max-width: 768px) {
