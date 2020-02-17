@@ -4,6 +4,7 @@ import './styles.css';
 import Navbar from '../../components/Navbar';
 import Banner from '../../components/Banner';
 import QuemSomos from '../../components/QuemSomos';
+import QuemSomos2 from '../../components/QuemSomos2';
 import Serviços from '../../components/Serviços';
 import Serviços2 from '../../components/Serviços2';
 import Eventos from '../../components/Eventos';
@@ -17,6 +18,7 @@ export default function Index() {
             <div className="container">
                 <QuemSomos />
                 <Serviços />
+                <QuemSomos2 />
                 <Serviços2 />
                 <Eventos />
                 <Footer />
