@@ -4,11 +4,19 @@
     background-color: #E5E6F0;
 }
 
-#section-3 .col-12{
+#section-3 .col-section{
     margin: 0 auto;
     max-width: 1100px;
     /* padding: 4rem 0; */
     /* background-color: #E5E6F0; */
+}
+
+#section-3 .col-section .row .col-12:last-child{
+    margin-top: 20px;
+}
+
+#section-3 .row div:last-child .row{
+    justify-content: center;
 }
 
 #section-3 .title {
@@ -59,4 +67,10 @@
     letter-spacing: 0.8px;
     /* font-size: 15px; */
     font-weight: bold;
+}
+
+@media screen and (max-width: 790px) {
+    #section-3 .col-section .row .col-12:last-child{
+        margin-top: 0;
+    }
 }

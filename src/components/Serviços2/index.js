@@ -1,13 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBrain, faChartLine, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons'
+import { faBrain, faChartLine, faChalkboardTeacher, faCode, faToolbox } from '@fortawesome/free-solid-svg-icons'
 
 import './styles.css';
 
 export default function Serviços2() {
     return (
         <div className="row" id="section-3">
-            <div className="col-12">
+            <div className="col-section">
                 <div className="row">
                     <div className="col-12 title">
                         <h1>Alcance seus objetivos com a Kadoo</h1>
@@ -49,6 +49,36 @@ export default function Serviços2() {
                             </div>
                             <div className="card-desc">
                                 <p>com o <span>Kadoo Businnes</span> e programas de treinamento sob demanda</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-12">
+                        <div className="row">
+                            <div className="col-4">
+                                <div className="card">
+                                    <div className="card-img">
+                                        <FontAwesomeIcon icon={faCode} size="4x"/>
+                                    </div>
+                                    <div className="card-title">
+                                        <h1>Faça parte de Inovações</h1>
+                                    </div>
+                                    <div className="card-desc">
+                                        <p>com nossos <span>Hackathons</span>, iremos desenvolver soluções que ajudem nossa região</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-4">
+                                <div className="card">
+                                    <div className="card-img">
+                                        <FontAwesomeIcon icon={faToolbox} size="4x"/>
+                                    </div>
+                                    <div className="card-title">
+                                        <h1>Serviços de Assitência</h1>
+                                    </div>
+                                    <div className="card-desc">
+                                        <p>em campos de alta demanda, como <span>TI</span> e <span>desenvolvimento pessoal</span></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

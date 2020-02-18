@@ -7,7 +7,7 @@ import QuemSomos from '../../components/QuemSomos';
 import QuemSomos2 from '../../components/QuemSomos2';
 import Serviços from '../../components/Serviços';
 import Serviços2 from '../../components/Serviços2';
-import Eventos from '../../components/Eventos';
+import Contato from '../../components/Contato';
 import Footer from '../../components/Footer';
 
 export default function Index() {
@@ -20,7 +20,7 @@ export default function Index() {
                 <Serviços />
                 <QuemSomos2 />
                 <Serviços2 />
-                <Eventos />
+                <Contato />
                 <Footer />
             </div>
             {/* <button type="button" className="scroll-top">Scroll to Top</button> */}
