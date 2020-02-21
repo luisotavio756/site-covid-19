@@ -28,17 +28,17 @@ export default function Contato() {
                                 <div className="col-6">
                                     <div className="form-group">
                                         <label>Seu Nome</label>
-                                        <input type="text" name="nome" />
+                                        <input type="text" name="nome" placeholder="Ex: Diego Gabriel"/>
                                     </div>
                                     <div className="form-group">
                                         <label>Seu Número</label>
-                                        <input type="number" name="phone" />
+                                        <input type="number" name="phone" placeholder="Ex: (88) 00000-0000"/>
                                     </div>
                                 </div>
                                 <div className="col-6">
                                     <div className="form-group">
                                         <label>Seu Melhor E-mail</label>
-                                        <input type="email" name="email" />
+                                        <input type="email" name="email"  placeholder="Ex: diego@gmail.com"/>
                                     </div>
                                     <div className="form-group">
                                         <label>Diga-nos em que se Interessou ?</label>
@@ -56,7 +56,7 @@ export default function Contato() {
                                 <div className="col-12">
                                     <div className="form-group">
                                         <label>Mensagem</label>
-                                        <textarea name="mensagem" rows="5"></textarea>
+                                        <textarea name="mensagem" rows="5" placeholder="Ex: Desejo falar sobre os serviços..."></textarea>
                                     </div>
                                     <div className="form-actions">
                                         <button type="submit" className="btn"><FontAwesomeIcon icon={faPaperPlane} /> Enviar Mensagem</button>
