@@ -6,11 +6,6 @@ import './styles.css';
 
 export default function Contato() {
 
-    const [github, setGithub] = useState('');
-    const [techs, setTechs] = useState('');
-    const [latitude, setLatitude] = useState('');
-    const [longitude, setLongitude] = useState('');
-
     function handleSubmit(e) {
         e.preventDefault();
         alert('kkkk')
@@ -18,9 +13,12 @@ export default function Contato() {
 
     return (
         <div className="row" id="contato">
-            <div className="col-12 content">
-                <h1>Se interessou ? Entre em contato conosco !</h1>
+            <div className="title">
+                <h1>Entre em contato conosco</h1>
+                <p>Será um prazer atendê-los !</p>
                 <div className="divider"></div>
+            </div>
+            <div className="col-12 content">
                 <div className="row">
                     <div className="col-12">
                         <form onSubmit={handleSubmit}>

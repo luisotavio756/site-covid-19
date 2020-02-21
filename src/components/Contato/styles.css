@@ -3,20 +3,29 @@
 }
 
 #contato .content {
-    margin: 0 auto;
+    margin: 25px auto;
     /* background-color: red; */
     max-width: 1100px;
     /* height: 300px; */
   
 }
 
-#contato h1{
+#contato .title {
+    width: 100%;
+    text-align: center;
+}
+
+#contato .title h1{
     text-align: center;
     font-size: 34px;
     color: #333;
 }
 
-#contato .divider {
+#contato .title p{
+    color: #999;
+}
+
+#contato .title .divider {
     margin: 3px auto;
     height: 4px;
     background-color: #b20710;
@@ -63,6 +72,7 @@ form .form-group input, form .form-group select, form .form-group textarea{
     font-size: 15px;
     color: #666;
     border: 0;
+    border-radius: 0 !important;
     border-bottom: 1px solid #eee;
     /* appearance: none;
     -webkit-appearance: none;
@@ -70,6 +80,14 @@ form .form-group input, form .form-group select, form .form-group textarea{
     outline: none !important;
     /* ie-dummy: expression(this.hideFocus=true); */
     background-color: transparent !important;
+}
+
+form .form-group input:focus, form .form-group select:focus, form .form-group textarea:focus{
+    border-bottom: 2px solid #b20710;
+}
+
+form .form-group textarea {
+    font-family: 'Product Sans', sans-serif;
 }
 
 form .form-actions button{

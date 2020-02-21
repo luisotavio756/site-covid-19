@@ -56,14 +56,13 @@
 
 .text button, .text button:focus, .text button:visited, .text button:active{
     margin-top: 10px;
-    height: 56px;
+    /* height: 56px; */
     text-decoration: none;
     /* padding-left: 50px !important; */
-
-    padding-right: 25px !important;
-    padding-left: 25px !important;
+   
+    padding: 12px 36px;
     border: none !important;
-    color:#fff !important;
+    color:#eee !important;
     background-color: #b20710;
     font-size: 1.3rem;
     font-weight: normal;
@@ -73,6 +72,7 @@
 }
 
 .text button:hover {
+    opacity: 0.9;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     
 }

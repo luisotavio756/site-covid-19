@@ -101,6 +101,6 @@ export const Background = styled.div`
 	background-repeat: no-repeat;
 	background-size: cover;
     padding: 3rem 0;
-    transition: all 3s linear;
+    /* transition: all 3s linear; */
 
 `;
