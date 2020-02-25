@@ -1,12 +1,11 @@
 import React from 'react';
+import Routes from './routes';
 
-import Index from './pages/Index';
 import './global.css';
 
-function App() {
-    return (
-        <Index />
-    );
+
+const App = () => {
+    return <Routes />;
 }
 
 export default App;

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -71,7 +72,7 @@ export default function Navbar() {
                     <a href="#linke">
                         <FontAwesomeIcon icon={faLinkedin}/>
                     </a>
-                    <a href="#">Login</a>
+                    <Link to="/login">Login</Link>
                 </div>
                 <div className="menu-expand" onClick={openNav}>
                     <FontAwesomeIcon icon={faBars} />
