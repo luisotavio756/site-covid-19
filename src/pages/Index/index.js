@@ -12,20 +12,24 @@ import Contato from '../../components/Contato';
 import Footer from '../../components/Footer';
 
 export default function Index() {
+
     return (
-        <div className="wrap">
-            <Navbar />
-            <Banner />
-            <div className="container">
-                <QuemSomos />
-                <Serviços />
-                <QuemSomos2 />
-                <Serviços2 />
-                <Parceiros />
-                <Contato />
-                <Footer />
-            </div>
-            {/* <button type="button" className="scroll-top">Scroll to Top</button> */}
-        </div>
+        // <div className="wrap">
+            <>
+                <Navbar />
+                <Banner />
+                <div className="container">
+                    <QuemSomos />
+                    <Serviços />
+                    <QuemSomos2 />
+                    <Serviços2 />
+                    <Parceiros />
+                    <Contato />
+                    <Footer />
+                </div>
+            </>
+            /*
+            <button type="button" className="scroll-top">Scroll to Top</button>
+        </div>*/
     );
 }

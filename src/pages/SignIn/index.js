@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import ReactTransitionGroup from 'react-addons-transition-group';
 import { Link, withRouter, Route, useHistory, useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 
 import Logo from '../../assets/img/kadoo.png';
 import api from '../../services/api';
 // import { login } from '../../services/auth';
 
-import { Form, Container } from './styles';
+import { Form, Container, Back } from './styles';
 
 const SignIn = () => {
     var history = useHistory();
@@ -54,21 +55,9 @@ const SignIn = () => {
         }
     } 
 
-    // handleInput = (e) => {
-    //     let name = e.target.name;
-    //     let error = name+"_error";
-    //     this.setState({ [name]: e.target.value });
-
-    //     if (e.target.value.length > 0) {
-    //         this.setState(
-    //             { 
-    //                 [error]: '' 
-    //             }
-    //         )
-    //     }
-    // }
-
     return (
+        <>
+        <Back onClick={() => history.push('/') }>< FontAwesomeIcon icon={faChevronLeft} /> Voltar</Back>
         <Container>
             <Form autoComplete="off" onSubmit={handleSignIn}>
                 <img src={Logo} alt="Airbnb" />
@@ -94,6 +83,7 @@ const SignIn = () => {
                 <Link to="/signup">Não tem uma Conta ? Cadastre-se !</Link>
             </Form>
         </Container>
+        </>
     );
 
 }

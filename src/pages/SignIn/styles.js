@@ -1,12 +1,21 @@
 import styled from 'styled-components';
 
+export const Back = styled.a`
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: #b20710;
+    font-weight: bold;
+    cursor: pointer;
+`;
 
 export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    padding: 0 20px;
+    /*height: 100vh; 
+    padding: 0 20px; */
+    
 `;
 
 export const Form = styled.form`

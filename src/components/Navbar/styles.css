@@ -40,7 +40,7 @@
 
 .navbar .nav-brand .brand .logo {
     padding-right: 15px;
-    border-right: 1px solid #999;
+    /* border-right: 1px solid #999; */
 }
 
 .navbar .nav-brand .social {
