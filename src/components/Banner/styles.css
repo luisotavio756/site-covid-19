@@ -54,7 +54,7 @@
     font-size: 1.2rem;
 }
 
-.text button, .text button:focus, .text button:visited, .text button:active{
+.text button{
     margin-top: 10px;
     /* height: 56px; */
     text-decoration: none;

@@ -6,7 +6,7 @@ import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-sv
 import Logo from '../../assets/img/kadoo.png';
 
 // import './styles.css';
-import { NavBar, NavBrand, NavMenu } from './styles';
+import { NavBar, NavContent, NavMenu, Social } from './styles';
 
 export default function Navbar() {
 
@@ -54,11 +54,9 @@ export default function Navbar() {
 
     return (
         <NavBar>
-            <NavBrand>
-                <div className="brand">
-                    <div className="logo">
-                        <img src={Logo} />
-                    </div>
+            <Social id="social">
+                <div className="contato">
+                    +55 81 3425.4700 | contato@cesar.org.br
                 </div>
                 <div className="social">
                     <a href="#face">
@@ -70,23 +68,30 @@ export default function Navbar() {
                     <a href="#linke">
                         <FontAwesomeIcon icon={faLinkedin}/>
                     </a>
-                    <Link to="/login">Login</Link>
+                    {/* <Link to="/login">Login</Link> */}
                 </div>
-                <div className="menu-expand" onClick={openNav}>
+            </Social>
+            <div className="divider"></div>
+            <NavContent>
+                <div className="brand">
+                    <div className="logo">
+                        <img src={Logo} />
+                    </div>
+                </div>
+                {/* <div className="menu-expand" onClick={openNav}>
                     <FontAwesomeIcon icon={faBars} />
-                </div>
-
-            </NavBrand>
-            <NavMenu>
-                <ul>
-                    <li className="active">Home</li>
-                    <li>Kadoo.hub</li>
-                    <li>Eventos</li>
-                    <li>Jobs</li>
-                    <li>Blog</li>
-                </ul>
-                <button onClick={(e) => closeNav(e.target)} type="button">&times;</button>
-            </NavMenu>
+                </div> */}
+                <NavMenu>
+                    <ul>
+                        <li>O QUE</li>
+                        <li>COMO</li>
+                        <li>EVENTOS</li>
+                        <li>CONTATO</li>
+                        <li>JOBS</li>
+                    </ul>
+                    <button onClick={(e) => closeNav(e.target)} type="button">&times;</button>
+                </NavMenu>
+            </NavContent>
         </NavBar>
     );
 }

@@ -4,7 +4,8 @@ import styled from 'styled-components';
 export const NavBar = styled.nav`
     position: fixed;
     width: 100%;   
-    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
+    /* box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.3); */
     z-index: 9999;
     transition: all 1s, background-image 2s;
 
@@ -12,14 +13,19 @@ export const NavBar = styled.nav`
         background-color: #333;
         color: white !important;
     }
+
+    .divider {
+        height: 1px;
+        background-color: rgba(255,255,255,.1);
+    }
     
     
 `;
 
-export const NavBrand = styled.div`
+export const NavContent = styled.div`
     display: flex;
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 1300px;
     padding:  1rem 4vw;
 
     align-items: center;
@@ -57,38 +63,7 @@ export const NavBrand = styled.div`
         margin-right: 10px;
     }
 
-    .social {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-
-        svg {
-            font-size: 18px !important;
-            margin: 0 7px;
-        }
-
-        a:last-child {
-            margin-left: 5px;
-            border: 1px solid #fff;
-            border-radius: 5px;
-            padding: 6px 24px;
-            font-size: 12px;
-            font-weight: bold;
-            transition: all 0.3s linear;
-        }
-
-        a:hover {
-            /* color: red; */
-            opacity: 0.9;
-            /* box-shadow: 0 0px 16px 1px gray; */
-        }
-
-        a:last-child:hover {
-            /* color: red; */
-            /* opacity: 0.9; */
-            box-shadow: 0 0px 16px 1px gray;
-        }
-    }
+    
 
     @media (max-width: 790px) {
         .brand .logo {
@@ -111,7 +86,7 @@ export const NavMenu = styled.div`
     /* height: 36px; */
     /* background-color: #999; */
     /* width: 100%; */
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
 
     button{
         display: none;
@@ -120,25 +95,40 @@ export const NavMenu = styled.div`
     ul {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        /* justify-content: space-evenly; */
         align-items: center;
         
         list-style: none;
 
         li {
+            /* letter-spacing: -1px; */
+            font-size: 13px;
+            font-weight: 700;
             padding: 10px 20px;
             color: white;
-            transition: all 1s step-start;
-
+            transition: all 0.3s;
+            /* text-transform: capitalize; */
             cursor: pointer;
 
-            &.active {
+            /* &.active {
                 border-bottom: 2px solid #b20710;
             }
 
             &:not(.dropdown):hover{
                 background-color: rgba(255, 255, 255, 0.1);
                 border-bottom: 2px solid #b20710;
+            } */
+            &:hover {
+                /* color: red; */
+                opacity: 0.8;
+            }
+
+            &:first-of-type {
+                padding-left: 0px !important; 
+            }
+
+            &:last-of-type {
+                padding-right: 0px !important; 
             }
         }
 
@@ -183,5 +173,57 @@ export const NavMenu = styled.div`
             flex-direction: column;
             justify-content: start;
         }
+    }
+`;
+
+export const Social = styled.div`
+    /* position: fixed; */
+    margin: 0 auto;
+    max-width: 1300px;
+    padding:  .7rem 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .5s ease-in-out;
+    /* padding-right: 1px; */
+    /* height: 40px; */
+
+    .contato {
+        color: white;
+        font-size: 12px;
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        svg {
+            color: white;
+            font-size: 16px !important;
+            margin: 0 15px;
+
+            &:last-of-type {
+                margin-right: 0px !important; 
+            }
+        }
+
+        /* a:last-child {
+            margin-left: 5px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            padding: 6px 24px;
+            font-size: 12px;
+            font-weight: bold;
+            transition: all 0.3s linear;
+        } */
+
+        a:hover {
+            /* color: red; */
+            opacity: 0.8;
+            /* box-shadow: 0 0px 16px 1px gray; */
+        }
+
+        
     }
 `;

@@ -23,30 +23,31 @@
     <script>
     
         var prevScrollpos = window.pageYOffset;
-        var height = document.getElementsByTagName("nav")[0].offsetHeight;
+        var height = document.getElementById("social").offsetHeight;
 
         window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
 
-            if (currentScrollPos > 500) {
-                document.getElementsByTagName("nav")[0].classList.add('navbar-dark');
-                // document.querySelector(".scroll-top").style.display = 'block';
-            }else{
-                document.getElementsByTagName("nav")[0].classList.remove('navbar-dark');
-                // document.querySelector(".scroll-top").style.display = 'none';
-            }
+            // if (currentScrollPos > 500) {
+            //     document.getElementsByTagName("nav")[0].classList.add('navbar-dark');
+            //     // document.querySelector(".scroll-top").style.display = 'block';
+            // }else{
+            //     document.getElementsByTagName("nav")[0].classList.remove('navbar-dark');
+            //     // document.querySelector(".scroll-top").style.display = 'none';
+            // }
 
            
             if (prevScrollpos > currentScrollPos) {
-                document.getElementsByTagName("nav")[0].style.top = "0";
+                document.getElementById("social").style.marginTop = "0";
             } else {
-                document.getElementsByTagName("nav")[0].style.top = `-${height}px`;
+                document.getElementById("social").style.marginTop = `-${height}px`;
             }
             
 
             prevScrollpos = currentScrollPos;
             
         } 
+        // alert(height)
     </script>
     <!-- <script src="../src/assets/js/jquery.js"></script> -->
 </html>

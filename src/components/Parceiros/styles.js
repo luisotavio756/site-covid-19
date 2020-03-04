@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import Parceiros from '../../assets/img/parceiros-img.png';
+// import Parceiros from '../../assets/img/parceiros-img.png';
 
 export const Row = styled.div`
     display: flex;
     flex-wrap: wrap;
-    background-image: linear-gradient(#000, #333), url(${Parceiros});
+
     background-blend-mode: multiply;
 
     background-attachment: fixed;

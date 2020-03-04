@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './styles.css';
 import Navbar from '../../components/Navbar';
@@ -12,6 +12,9 @@ import Contato from '../../components/Contato';
 import Footer from '../../components/Footer';
 
 export default function Index() {
+    useEffect(() => {
+        document.title = 'Kadoo Tecnologia';
+    });
 
     return (
         // <div className="wrap">
@@ -19,12 +22,12 @@ export default function Index() {
                 <Navbar />
                 <Banner />
                 <div className="container">
-                    <QuemSomos />
-                    <Serviços />
-                    <QuemSomos2 />
-                    <Serviços2 />
-                    <Parceiros />
-                    <Contato />
+                    {/* <QuemSomos /> */}
+                    {/* <Serviços /> */}
+                    {/* <QuemSomos2 /> */}
+                    {/* <Serviços2 /> */}
+                    {/* <Parceiros /> */}
+                    {/* <Contato /> */}
                     <Footer />
                 </div>
             </>
