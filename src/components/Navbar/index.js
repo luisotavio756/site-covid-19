@@ -56,7 +56,7 @@ export default function Navbar() {
         <NavBar>
             <Social id="social">
                 <div className="contato">
-                    +55 81 3425.4700 | contato@cesar.org.br
+                    +55 81 3425.4700 | contato@kadoo.org.br
                 </div>
                 <div className="social">
                     <a href="#face">
@@ -83,6 +83,7 @@ export default function Navbar() {
                 </div> */}
                 <NavMenu>
                     <ul>
+                        <li>QUEM</li>
                         <li>O QUE</li>
                         <li>COMO</li>
                         <li>EVENTOS</li>
