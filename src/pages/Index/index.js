@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import './styles.css';
 import Navbar from '../../components/Navbar';
 import Banner from '../../components/Banner';
-import QuemSomos from '../../components/QuemSomos';
+import Eventos from '../../components/Eventos';
 import QuemSomos2 from '../../components/QuemSomos2';
 import Serviços from '../../components/Serviços';
 import Serviços2 from '../../components/Serviços2';
@@ -22,7 +22,7 @@ export default function Index() {
                 <Navbar />
                 <Banner />
                 <div className="container">
-                    {/* <QuemSomos /> */}
+                    <Eventos />
                     {/* <Serviços /> */}
                     {/* <QuemSomos2 /> */}
                     {/* <Serviços2 /> */}
