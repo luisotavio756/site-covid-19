@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Img from '../../assets/img/banner.jpg';
+import ImgMob from '../../assets/img/banner-mob.jpg';
 
 export const BannerImg = styled.div`
 
@@ -7,6 +8,11 @@ export const BannerImg = styled.div`
     height: 100vh;
     
     background-image: linear-gradient(#fff, #333), url(${Img});
+    
+    @media screen and (max-width: 790px) {
+        background-image: linear-gradient(#fff, #333), url(${ImgMob});
+    }
+
 	background-blend-mode: multiply;
 	/* filter: blur(1px); */
 	/* Set a specific height */
