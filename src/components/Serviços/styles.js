@@ -1,5 +1,13 @@
 import styled from 'styled-components';
-import Img from '../../assets/img/parallax.jpg';
+import Img from '../../assets/img/img3.jpg';
+
+
+export const Img1 = styled.img`
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+    filter: invert(1);
+`; 
 
 export const Card = styled.div`
     width: 33.3%;
@@ -90,7 +98,7 @@ export const ContainerSection = styled.div`
 `;
 
 export const Background = styled.div`
-    background-image: linear-gradient(#fff, #333), url(${Img});
+    background-image: linear-gradient(#fff, #000), url(${Img});
 	background-blend-mode: multiply;
 
 	height: auto;
@@ -103,4 +111,9 @@ export const Background = styled.div`
     padding: 3rem 0;
     /* transition: all 3s linear; */
 
+`;
+
+export const Row = styled.div`
+    display: flex;
+    flex-wrap: wrap;
 `;
