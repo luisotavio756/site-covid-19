@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
@@ -9,7 +9,9 @@ import Logo from '../../assets/img/kadoo.png';
 import { NavBar, NavContent, NavMenu, Social } from './styles';
 
 export default function Navbar() {
-
+    
+    const [ nav, SetNav ] = useState(false);
+    
     useEffect(() => {
         document.querySelectorAll('li.dropdown').forEach(item => {
             item.addEventListener('click', async () => {
@@ -78,10 +80,10 @@ export default function Navbar() {
                         <img src={Logo} />
                     </div>
                 </div>
-                {/* <div className="menu-expand" onClick={openNav}>
+                <div className="menu-expand" onClick={(e) => SetNav(true)}>
                     <FontAwesomeIcon icon={faBars} />
-                </div> */}
-                <NavMenu>
+                </div>
+                <NavMenu open={nav}>
                     <ul>
                         <li>QUEM</li>
                         <li>O QUE</li>
@@ -90,7 +92,7 @@ export default function Navbar() {
                         <li>CONTATO</li>
                         <li>JOBS</li>
                     </ul>
-                    <button onClick={(e) => closeNav(e.target)} type="button">&times;</button>
+                    <button onClick={(e) => SetNav(false)} type="button">&times;</button>
                 </NavMenu>
             </NavContent>
         </NavBar>

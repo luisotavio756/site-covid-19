@@ -1,89 +1,37 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBrain, faChartLine, faChalkboardTeacher, faCode, faToolbox } from '@fortawesome/free-solid-svg-icons'
+import { faPaperclip } from '@fortawesome/free-solid-svg-icons'
 
-import './styles.css';
+import { Row, Section, Img } from './styles';
+import Ig1 from '../../assets/img/jobs.svg';
 
 export default function Serviços2() {
     return (
-        <div className="row" id="section-3">
-            <div className="col-section">
-                <div className="row">
-                    <div className="col-12 title">
-                        <h1>Alcance seus objetivos com a Kadoo</h1>
+        <Row>
+            <Section className="col-12">
+                <Row>
+                    <div className="col-12 header">
+                        <h1>Jobs</h1>
                         <div className="divider"></div>
                     </div>
-                    <div className="col-4">
-                        <div className="card">
-                            <div className="card-img">
-                                <FontAwesomeIcon icon={faBrain} size="4x"/>
-                            </div>
-                            <div className="card-title">
-                                <h1>Aprenda as habilidades do futuro</h1>
-                            </div>
-                            <div className="card-desc">
-                                <p>como <span>programação</span>, <span>web design</span>, <span>marketing</span> e muito mais</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-4">
-                        <div className="card">
-                            <div className="card-img">
-                                <FontAwesomeIcon icon={faChartLine} size="4x"/>
-                            </div>
-                            <div className="card-title">
-                                <h1>Eleve sua carreira</h1>
-                            </div>
-                            <div className="card-desc">
-                                <p>em campos de alta demanda, como <span>TI</span> e <span>desenvolvimento pessoal</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-4">
-                        <div className="card">
-                            <div className="card-img">
-                                <FontAwesomeIcon icon={faChalkboardTeacher} size="4x"/>
-                            </div>
-                            <div className="card-title">
-                                <h1>Capacite sua organização</h1>
-                            </div>
-                            <div className="card-desc">
-                                <p>com o <span>Kadoo Businnes</span> e programas de treinamento sob demanda</p>
-                            </div>
-                        </div>
-                    </div>
                     <div className="col-12">
-                        <div className="row">
-                            <div className="col-4">
-                                <div className="card">
-                                    <div className="card-img">
-                                        <FontAwesomeIcon icon={faCode} size="4x"/>
-                                    </div>
-                                    <div className="card-title">
-                                        <h1>Faça parte de Inovações</h1>
-                                    </div>
-                                    <div className="card-desc">
-                                        <p>com nossos <span>Hackathons</span>, iremos desenvolver soluções que ajudem nossa região</p>
-                                    </div>
-                                </div>
+                        <Row>
+                            <div className="col-12 img" style={{ textAlign: 'center' }}>
+                                <Img src={Ig1} alt="Jobs"/>
                             </div>
-                            <div className="col-4">
-                                <div className="card">
-                                    <div className="card-img">
-                                        <FontAwesomeIcon icon={faToolbox} size="4x"/>
-                                    </div>
-                                    <div className="card-title">
-                                        <h1>Serviços de Assitência</h1>
-                                    </div>
-                                    <div className="card-desc">
-                                        <p>em campos de alta demanda, como <span>TI</span> e <span>desenvolvimento pessoal</span></p>
-                                    </div>
+                            <div className="col-6 desc">
+                                <div className="text">
+                                    <p>Buscamos sempre <span>conectar</span> pessoas e <span>compartilhar</span> conteúdo, então criamos o Kadoo.Jobs, um lugar para dar mais visibilidade ao seu CV.
+                                    </p>
+                                    <p>Cadastre seu currículo em nossa plataforma e tenha visibilidade no mercado da cidade e região. É simples e prático, basta preencher algumas informações e pronto ! Você ficará visível para as empresas.</p>
                                 </div>
+                                <Link to="/teste"><FontAwesomeIcon icon={faPaperclip} style={{ marginRight: '5' }}/> Conhecer Kadoo.Jobs</Link>
                             </div>
-                        </div>
+                        </Row>
                     </div>
-                </div>
-            </div>
-        </div>
+                </Row>
+            </Section>
+        </Row>
     );
 }

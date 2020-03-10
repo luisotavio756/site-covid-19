@@ -137,7 +137,7 @@ export const NavMenu = styled.div`
     @media (max-width: 790px) {
         &{
             height: 100vh;
-            width: 0; 
+            width: ${props => props.open == true ? '100%' : '0'}; 
             position: fixed;
             z-index: 9999;
             top: 0;
@@ -165,6 +165,14 @@ export const NavMenu = styled.div`
         ul li{
             margin-top: 20px;
             font-size: 20px;
+
+            &:first-of-type {
+                padding-left: 20px !important; 
+            }
+
+            &:last-of-type {
+                padding-right: 20px !important; 
+            }
         }
 
         ul{

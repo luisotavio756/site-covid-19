@@ -6,7 +6,7 @@ import Banner from '../../components/Banner';
 import Eventos from '../../components/Eventos';
 import Serviços from '../../components/Serviços';
 // import QuemSomos2 from '../../components/QuemSomos2';
-// import Serviços2 from '../../components/Serviços2';
+import Serviços2 from '../../components/Serviços2';
 // import Parceiros from '../../components/Parceiros';
 // import Contato from '../../components/Contato';
 import Footer from '../../components/Footer';
@@ -25,7 +25,7 @@ export default function Index() {
                     <Eventos />
                     <Serviços />
                     {/* <QuemSomos2 /> */}
-                    {/* <Serviços2 /> */}
+                    <Serviços2 />
                     {/* <Parceiros /> */}
                     {/* <Contato /> */}
                     <Footer />
