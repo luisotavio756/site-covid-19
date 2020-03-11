@@ -10,6 +10,36 @@ export const Section = styled.div`
     margin: 0 auto;
     max-width: 1300px;
 
+
+    .col-10 {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .img {
+            width: 50%;
+        }
+
+        .desc {
+            width: 50%;
+        }
+
+        @media screen and (max-width: 790px) { 
+            flex-direction: column;
+            align-items: center;
+
+            .img {
+                text-align: center;
+            }
+
+            .img, .desc {
+                width: 100%;
+            }
+        }
+    }
+
     .header {
         
         margin-bottom: 30px;
@@ -29,8 +59,8 @@ export const Section = styled.div`
     }
 
     .desc {
-        margin: 15px auto;
-        text-align: center;
+        margin: 15px 0;
+        text-align: justify;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -59,13 +89,13 @@ export const Section = styled.div`
         }
 
         a {
-            margin: 10px auto;
+            margin: 10px 0;
             display: flex;
             align-items: center;
             justify-content: center;
 
-            align-self: flex-end;
-            max-width: 280px;
+            align-self: center;
+            width: 80%;
             background: #b20710;
             color: #fff;
             font-size: 18px;
@@ -84,10 +114,6 @@ export const Section = styled.div`
 
 export const Img = styled.img`
     margin: 0 auto;
-    width: 20%;
+    width: 100%;
     height: auto;
-
-    @media screen and (max-width: 790px) { 
-        width: 75%;
-    }
 `;
