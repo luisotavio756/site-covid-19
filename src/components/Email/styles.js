@@ -1,10 +1,12 @@
 import styled from 'styled-components';
-// import Parceiros from '../../assets/img/parceiros-img.png';
+import Banner from '../../assets/img/email.jpg';
 
 export const Row = styled.div`
     display: flex;
     flex-wrap: wrap;
 
+    /* background-color: #b20710; */
+    background-image: linear-gradient(#333, #000), url(${Banner});
     background-blend-mode: multiply;
 
     background-attachment: fixed;
@@ -12,7 +14,7 @@ export const Row = styled.div`
 	background-repeat: no-repeat;
     background-size: cover;
     
-    min-height: 400px;
+    /* min-height: 400px; */
     align-items: center;
 `;
 
@@ -37,7 +39,7 @@ export const ContainerSection = styled.div`
         margin: 3px auto;
         height: 4px;
         background-color: #b20710;
-        width: 10%;
+        width: 30%;
         border-radius: 60px;
     }
 
@@ -55,15 +57,85 @@ export const Img = styled.img`
     }
 `;
 
-export const Itens = styled.div`
+export const Card = styled.div`
     width: 100%;
-    margin-top: 30px;
     display: flex;
-    align-items: center;
+
+    /* align-items: center; */
     justify-content: center;
 
     @media (max-width: 768px) {
         flex-direction: column;
+
+        .form {
+            margin-top: 20px;
+        }
+    }
+    
+    .icon {
+        /* width: 30%; */
+        padding: 0 15px;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            width: 100%;
+            height: auto;
+            filter: invert(1);
+        }
+        /* background: #000; */
+    }
+
+    .form {
+        /* width: 70%; */
+        padding: 0 15px;
+
+        h1 {
+            color: #fff;
+        }
+
+        p {
+            color: #999;
+        }
+
+        form {
+            margin-top: 10px;
+            position: relative;
+        }
+
+        form input {
+            width: 100%;
+            height: 42px;
+            border: none;
+            padding: 5px 12px;
+            font-size: 14px;
+            color: rgb(102, 102, 102);
+            border-radius: 3px;
+        }
+
+        form button {
+            background: transparent;
+            border: none;
+            padding: 0 !important;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        form svg {
+            font-size: 20px;
+            /* position: absolute; */
+            color: #0d0e0f;
+            /* right: 15px;
+            top: 13px; */
+        }
+        /* background: red; */
     }
 `;
 

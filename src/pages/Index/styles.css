@@ -14,11 +14,11 @@
     border: none;
     border-radius: 120px;
 
-    position: absolute;
-    z-index: 99999999999;
+    position: fixed;
+    /* z-index: 99999999999; */
     bottom: 15px;
     right: 15px;
 
     cursor: pointer;
-    display: none;
+    /* display: none; */
 }

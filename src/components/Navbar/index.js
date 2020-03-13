@@ -58,7 +58,7 @@ export default function Navbar() {
         <NavBar>
             <Social id="social">
                 <div className="contato">
-                    +55 81 3425.4700 | contato@kadoo.org.br
+                    +55 88 3411-0404 | contato@kadoo.com.br
                 </div>
                 <div className="social">
                     <a href="#face">
