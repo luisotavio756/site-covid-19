@@ -98,13 +98,13 @@ export const ContainerSection = styled.div`
 `;
 
 export const Background = styled.div`
-    background-image: linear-gradient(#fff, #000), url(${Img});
+    background-image: linear-gradient(#555, #000), url(${Img});
 	background-blend-mode: multiply;
 
 	height: auto;
 
 	/* Create the parallax scrolling effect */
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
