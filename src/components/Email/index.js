@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
+
+// FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight, faPaperPlane, faLock } from '@fortawesome/free-solid-svg-icons'
 
+// Components Styleds
 import { Row, ContainerSection, Section, Card } from './styles';
 
+// Image
 import Icon from '../../assets/img/message.svg';
+   
 export default function Parceiros() {
 
     const [ email, setEmail ] = useState('');

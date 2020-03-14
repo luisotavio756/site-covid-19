@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Banner from '../../assets/img/email.jpg';
 
+
 export const Row = styled.div`
     display: flex;
     flex-wrap: wrap;
