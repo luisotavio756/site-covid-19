@@ -31,10 +31,10 @@ export const BannerImg = styled.div`
         left: 100px;
         top: 260px; */
         /* max-width: 700px; */
-        padding: 60px 4vw;
         color: white;
-
+        
         h1{
+            /* padding: 60px 4vw; */
             text-align: center;
             font-size: 52px;
             font-weight: bold !important;

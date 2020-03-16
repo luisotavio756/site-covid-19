@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import './styles.css';
+
 import Navbar from '../include/Navbar';
 import Banner from './components/Banner';
 import Eventos from './components/Eventos';
