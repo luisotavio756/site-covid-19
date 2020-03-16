@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Index from './pages/Index';
 import SignIn from './pages/SignIn';
+import Quem from './pages/Quem';
+
 import './global.css';
 
 import { isAuthenticated } from './auth.js';
@@ -19,6 +21,7 @@ const PrivateRoute = ({ component: Component, ...rest}) => (
 
 const routes = [
     { path: '/', name: 'Home', Component: Index },
+    { path: '/quem', name: 'Quem', Component: Quem},
     { path: '/login', name: 'About', Component: SignIn, styles: { height: '100vh', justifyContent: 'center', padding: '0 20px' } },
 ];
 
