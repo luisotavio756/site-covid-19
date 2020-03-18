@@ -86,7 +86,7 @@ export default function Navbar() {
                 <NavMenu open={nav}>
                     <ul>
                         <li><Link to="/quem">QUEM</Link></li>
-                        <li>O QUE</li>
+                        <li><Link to="/oque">O QUE</Link></li>
                         <li>COMO</li>
                         <li>EVENTOS</li>
                         <li>CONTATO</li>

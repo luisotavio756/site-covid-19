@@ -26,7 +26,8 @@ export default function Section() {
                         <img src={Missao} alt=""/>
                         <h1>Missão</h1>
                         <div className="divider"></div>
-                        <p>Nos que fazemos a Kadoo estamos comprometidos com a transformação social, econômica e sustentável da nossa cidade e região, trabalhamos duro diariamente para fazer isso acontecer.
+                        <p>
+                            Conectar pessoas, compartilhar conhecimento e colaborar com a criação de novas oportunidades que transformem a nossa cidade e região.
                         </p>
                     </div>
                     <div className="col-6 visao">
