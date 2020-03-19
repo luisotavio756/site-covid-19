@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Includes
 import Navbar from '../include/Navbar';
@@ -8,6 +8,7 @@ import Banner from './components/Banner';
 import Section from './components/Section';
 
 export default function OQue() {
+    
     return (
         <>
             <Navbar />

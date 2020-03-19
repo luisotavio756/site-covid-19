@@ -52,7 +52,7 @@ export const Form = styled.form`
         font-size: 15px;
         width: 100%;
         border: 1px solid #ddd;
-        border-radius: 20px;
+        border-radius: 5px;
         transition: all 0.2s linear;
 
         &::placeholder {
@@ -76,12 +76,13 @@ export const Form = styled.form`
 
     button{
         /* background-color: #b20710; */
+        cursor: pointer;
         color: #fff;
         font-size: 16px;
         background: #b20710;
         height: 42px;
         border: 2px solid #b20710;
-        border-radius: 25px;
+        border-radius: 5px;
         width: 100%;
         font-weight: bold;
         transition: all 0.2s;

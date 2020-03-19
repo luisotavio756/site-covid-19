@@ -39,10 +39,12 @@ const SignIn = () => {
         } else {
             // alert(email + password)
             try {
-                const response = await api.post("/users/auth", {
-                    email,
-                    password
-                });
+                // const response = await api.post("/users/auth", {
+                //     email,
+                //     password
+                // });
+                if(!email == 'luis.otavio2425@gmail.com' || !password == 'otavio15')
+                    return 0;
                 
                 // alert(JSON.stringify(response))
                 // login(response.data.token);

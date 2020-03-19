@@ -25,13 +25,13 @@ const routes = [
     { path: '/', name: 'Home', Component: Index },
     { path: '/quem', name: 'Quem', Component: Quem},
     { path: '/oque', name: 'OQue', Component: OQue},
-    { path: '/login', name: 'About', Component: SignIn, styles: { height: '100vh', justifyContent: 'center', padding: '0 20px' } },
+    { path: '/sis/login', name: 'Login', Component: SignIn, styles: { height: '100vh', justifyContent: 'center', padding: '0 20px' } },
 ];
 
 
 const Routes = () => (
+    
     <BrowserRouter>
-
         <Switch>
             {routes.map(({ path, Component, styles: Styles}) => (
                 <Route key={path} exact path={path}>
@@ -41,7 +41,6 @@ const Routes = () => (
                 </Route>
             ))}
         </Switch>
-
     </BrowserRouter>
 );
 
