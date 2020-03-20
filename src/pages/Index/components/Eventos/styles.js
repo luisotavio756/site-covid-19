@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Img from '../../../../assets/img/evento.jpg';
+import Img from '../../../../assets/img/evento.webp';
 
 export const Row = styled.div`
     display: flex;

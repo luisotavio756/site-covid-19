@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Banner from '../../../../assets/img/email.jpg';
+import Banner from '../../../../assets/img/email.webp';
 
 
 export const Row = styled.div`

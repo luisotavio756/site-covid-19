@@ -87,7 +87,7 @@ export default function Navbar() {
                     <ul>
                         <li><Link to="/quem">QUEM</Link></li>
                         <li><Link to="/oque">O QUE</Link></li>
-                        <li>COMO</li>
+                        <li><Link to="/como">COMO</Link></li>
                         <li>EVENTOS</li>
                         <li>CONTATO</li>
                         <li>JOBS</li>

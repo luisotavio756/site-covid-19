@@ -1,9 +1,8 @@
 import styled from 'styled-components';
-import Img from '../../../../assets/img/banner.jpg';
+import Img from '../../../../assets/img/banner.webp';
 import ImgMob from '../../../../assets/img/banner-mob.jpg';
 
 export const BannerImg = styled.div`
-
     width: 100%;
     height: 100vh;
     
@@ -99,7 +98,8 @@ export const BannerImg = styled.div`
                 width: 100% !important;
             }
         }
-    }
 
+        
+    }
 
 `;

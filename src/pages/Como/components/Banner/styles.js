@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import Img from '../../../../assets/img/banner-oque.webp';
-import ImgMob from '../../../../assets/img/banner-oque-mob.jpg';
+import Img from '../../../../assets/img/banner-quem.webp';
+// import ImgMob from '../../../../assets/img/banner-quem-mob.jpg';
 
 export const BannerImg = styled.div`
     position: relative;
@@ -9,9 +9,7 @@ export const BannerImg = styled.div`
     
     background-image: linear-gradient(#999, #333), url(${Img});
     
-    @media screen and (max-width: 790px) {
-        background-image: linear-gradient(#999, #333), url(${ImgMob});
-    }
+    /* */
     
 	background-blend-mode: multiply;
 	/* filter: blur(1px); */
@@ -142,4 +140,6 @@ export const BannerImg = styled.div`
         }
         }
     }
+
+
 `;

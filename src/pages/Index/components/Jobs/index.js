@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 import { Row, Section, Img } from './styles';
-import Ig1 from '../../../../assets/img/4565.jpg';
+import Ig1 from '../../../../assets/img/4565.webp';
 
 export default function Serviços2() {
     return (

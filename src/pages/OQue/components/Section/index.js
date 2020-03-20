@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight, faCheckDouble, faAngleRight,  } from '@fortawesome/free-solid-svg-icons';
 
 // Import Images
-import ImgOQue from '../../../../assets/img/img-oque.jpg';
+import ImgOQue from '../../../../assets/img/img-oque.webp';
 import Include from '../../../../assets/img/parceiros/logo.svg';
 import Hiper from '../../../../assets/img/parceiros/hiper.svg'
 
@@ -16,7 +16,7 @@ import Valores from '../../../../assets/img/valores.svg';
 export default function Section() {
     return(
         <>
-            <Row>
+            <Row id="scroll">
                 <SectionText className="col-7">
                     <p>
                         <FontAwesomeIcon icon={faAngleDoubleRight} /> Os negócios e as pessoas que mais se destacam são aquelas que além de identificar as novas tendências, trabalham para criar o futuro.

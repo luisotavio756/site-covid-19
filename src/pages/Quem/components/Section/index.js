@@ -3,14 +3,15 @@ import React from 'react';
 import { Row, SectionImg, SectionText, Ul } from './styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDoubleRight, faCheckDouble } from '@fortawesome/free-solid-svg-icons';
-import Img from '../../../../assets/img/img-quem.jpg';
+
+import Img from '../../../../assets/img/img-quem.webp';
 import Missao from '../../../../assets/img/missao.svg';
 import Visao from '../../../../assets/img/visao.svg';
 import Valores from '../../../../assets/img/valores.svg';
 
 export default function Section() {
     return(
-        <Row>
+        <Row id="scroll">
             <SectionImg className="col-5">
                 <img src={Img} alt=""/>
             </SectionImg>

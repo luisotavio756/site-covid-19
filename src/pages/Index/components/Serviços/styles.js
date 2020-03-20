@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Img from '../../../../assets/img/img3.jpg';
+import Img from '../../../../assets/img/img3.webp';
 
 
 export const Img1 = styled.img`

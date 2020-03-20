@@ -5,6 +5,7 @@ import Index from './pages/Index';
 import SignIn from './pages/SignIn';
 import Quem from './pages/Quem';
 import OQue from './pages/OQue';
+import Como from './pages/Como';
 
 import './global.css';
 
@@ -25,6 +26,7 @@ const routes = [
     { path: '/', name: 'Home', Component: Index },
     { path: '/quem', name: 'Quem', Component: Quem},
     { path: '/oque', name: 'OQue', Component: OQue},
+    { path: '/como', name: 'Como', Component: Como},
     { path: '/sis/login', name: 'Login', Component: SignIn, styles: { height: '100vh', justifyContent: 'center', padding: '0 20px' } },
 ];
 
