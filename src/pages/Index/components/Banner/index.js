@@ -1,13 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BannerImg } from './styles';
+import Typewriter from 'typewriter-effect';
 
 export default function Banner() {
+
     return (
         <BannerImg>
-            <div className="text">
-                <h1>conectar <span>pessoas</span>, <br/><span>compartilhar</span> conhecimento<br />e criar <span>oportunidades</span></h1>
-                {/* <p className="col-9">Desenvolva habilidades com cursos, certificados e graduações on-line das melhores universidades e empresas do mundo</p> */}
-                {/* <button type="button" className="btn">Saiba mais</button> */}
+            <div className="text" id="text">
+                <h1>
+                    <Typewriter
+                        onInit={(typewriter) => {
+                            typewriter
+                            .typeString('conectar <span>Pessoas</span>, <br/><span>Compartilhar</span> conhecimento<br />e criar <span>Oportunidades !</span>')
+                            .pauseFor(2500)
+                            .deleteAll(30)
+                            .typeString('<span>Nós somos a Kadoo !</span>')
+                            .pauseFor(2500)
+                            .start();
+                      }}
+                        
+                      options={{
+                            delay: 50,
+                            loop: true
+                      }}
+                    />
+                </h1>
             </div>
         </BannerImg>
     );

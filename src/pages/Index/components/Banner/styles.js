@@ -48,6 +48,10 @@ export const BannerImg = styled.div`
                 color: white !important;
                 /* border-bottom: 6px solid #b20710; */
             }
+
+            .Typewriter__wrapper {
+                color: #cccccc !important;
+            }
         }
 
         p{
