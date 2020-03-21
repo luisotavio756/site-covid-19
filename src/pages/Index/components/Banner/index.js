@@ -20,7 +20,7 @@ export default function Banner() {
                       }}
                         
                       options={{
-                            delay: 50,
+                            delay: 60,
                             loop: true
                       }}
                     />

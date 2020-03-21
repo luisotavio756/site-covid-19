@@ -38,12 +38,12 @@ export default function Footer() {
                         <h1>Menus</h1>
                         <div className="content">
                             <Menu>
-                                <li><Link to="#">Quem</Link></li>
-                                <li><Link to="#">O Que</Link></li>
-                                <li><Link to="#">Como</Link></li>
-                                <li><Link to="#">Eventos</Link></li>
-                                <li><Link to="#">Contato</Link></li>
-                                <li><Link to="#">Jobs</Link></li>
+                                <li><Link to="/quem">Quem</Link></li>
+                                <li><Link to="/oque">O Que</Link></li>
+                                <li><Link to="/como">Como</Link></li>
+                                <li><Link to="/eventos">Eventos</Link></li>
+                                <li><Link to="/contato">Contato</Link></li>
+                                <li><Link to="/jobs">Jobs</Link></li>
                             </Menu>
                         </div>
                     </div>

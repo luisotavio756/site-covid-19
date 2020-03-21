@@ -1,58 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+
+// Import Router
 import { Link } from 'react-router-dom';
+
+// Import Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
+// Import Logo
 import Logo from '../../../assets/img/kadoo.png';
 
-// import './styles.css';
+// Import Styleds;
 import { NavBar, NavContent, NavMenu, Social } from './styles';
 
 export default function Navbar() {
     
     const [ nav, SetNav ] = useState(false);
-    
-    useEffect(() => {
-        document.querySelectorAll('li.dropdown').forEach(item => {
-            item.addEventListener('click', async () => {
-                if(item.querySelector('.dropdown-content').offsetHeight === 0) {
-                    let height = () => {
-                        item.querySelector('.dropdown-content').style.opacity = '1';
-                    };
-                    
-                    await height();
-                    item.querySelector('.dropdown-content').style.height = '100%';
-                }else {
-                    let height = () => {
-                        item.querySelector('.dropdown-content').style.opacity = '0';
-                    };
-                    
-                    await height();
-                    item.querySelector('.dropdown-content').style.height = '0';
-                }
-            })
-        });
-        // alert(JSON.stringify(data));
-
-    });
-
-    function openNav() {
-        // document.querySelector(".nav-menu button").style.opacity = '1';
-        // document.querySelector(".nav-menu ul").style.opacity = '1';
-        // document.querySelector(".nav-menu").style.width = '100%';
-        // alert('open')
-    }
-
-    async function closeNav(e) {
-        var fade = () => {
-            e.style.opacity = '0';
-            // document.querySelector(".nav-menu ul").style.opacity = '0';
-        }
-
-        await fade();
-
-        document.querySelector(".nav-menu").style.width = '0';
-    }
 
     return (
         <NavBar>
@@ -88,9 +52,9 @@ export default function Navbar() {
                         <li><Link to="/quem">QUEM</Link></li>
                         <li><Link to="/oque">O QUE</Link></li>
                         <li><Link to="/como">COMO</Link></li>
-                        <li>EVENTOS</li>
-                        <li>CONTATO</li>
-                        <li>JOBS</li>
+                        <li><Link to="/eventos">EVENTOS</Link></li>
+                        <li><Link to="/contato">CONTATO</Link></li>
+                        <li><Link to="/jobs">JOBS</Link></li>
                     </ul>
                     <button onClick={(e) => SetNav(false)} type="button">&times;</button>
                 </NavMenu>

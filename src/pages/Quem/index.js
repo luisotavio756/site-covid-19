@@ -10,10 +10,8 @@ import Section from './components/Section';
 export default function Quem() {
     return (
         <>
-            <Navbar />
             <Banner />
             <Section />
-            <Footer />
         </>
     );
 }

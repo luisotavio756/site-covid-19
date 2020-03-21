@@ -172,9 +172,9 @@ a {
     }
   }
 
-#root {
+/* #root {
     position: relative;
-}
+} */
   
 .page {
     position: absolute;
