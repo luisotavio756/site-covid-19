@@ -59,6 +59,8 @@ const Routes = () => (
     
     <BrowserRouter>
         <NavBar />
+
+        {/* Routes */}
         <Switch>
             <Route exact path="/" component={Index}  />
             <Route path="/quem" component={Quem} />
@@ -66,6 +68,8 @@ const Routes = () => (
             <Route path="/como" component={Como} />
             <Route path="/eventos" component={Eventos}  />
         </Switch>
+        {/* Routes */}
+        
         <Footer />
     </BrowserRouter>
 );

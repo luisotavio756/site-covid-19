@@ -49,12 +49,12 @@ export default function Navbar() {
                 </div>
                 <NavMenu open={nav}>
                     <ul>
-                        <li><Link to="/quem">QUEM</Link></li>
-                        <li><Link to="/oque">O QUE</Link></li>
-                        <li><Link to="/como">COMO</Link></li>
-                        <li><Link to="/eventos">EVENTOS</Link></li>
-                        <li><Link to="/contato">CONTATO</Link></li>
-                        <li><Link to="/jobs">JOBS</Link></li>
+                        <li><Link onClick={() => SetNav(false) } to="/quem">QUEM</Link></li>
+                        <li><Link onClick={() => SetNav(false) } to="/oque">O QUE</Link></li>
+                        <li><Link onClick={() => SetNav(false) } to="/como">COMO</Link></li>
+                        <li><Link onClick={() => SetNav(false) } to="/eventos">EVENTOS</Link></li>
+                        <li><Link onClick={() => SetNav(false) } to="/contato">CONTATO</Link></li>
+                        <li><Link onClick={() => SetNav(false) } to="/jobs">JOBS</Link></li>
                     </ul>
                     <button onClick={(e) => SetNav(false)} type="button">&times;</button>
                 </NavMenu>

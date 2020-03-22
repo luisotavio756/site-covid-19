@@ -157,20 +157,31 @@ a {
     border-radius: 50%;
     animation: load8 1.1s infinite linear;
     transition: opacity 0.3s;
-  }
+}
+
+.loader-more {
+    width: 3em;
+    height: 3em;
+    border: .4em solid rgba(0, 0, 0, 0.2);
+    border-left: .4em solid #b70710;
+    border-radius: 50%;
+    animation: load8 1.1s infinite linear;
+    transition: opacity 0.3s;
+    margin: 0 auto;
+}
   
-  .loader--hide {
+.loader--hide {
     opacity: 0;
-  }
+}
   
-  @keyframes load8 {
+@keyframes load8 {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
 
 /* #root {
     position: relative;
