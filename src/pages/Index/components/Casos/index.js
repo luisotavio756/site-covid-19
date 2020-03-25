@@ -59,6 +59,51 @@ export default function Casos() {
                                     <td className="text-right">182</td>
                                     <td className="text-right">0</td>
                                 </tr>
+                                <tr>
+                                    <td>Ceará</td>
+                                    <td className="text-right">182</td>
+                                    <td className="text-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Ceará</td>
+                                    <td className="text-right">182</td>
+                                    <td className="text-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Ceará</td>
+                                    <td className="text-right">182</td>
+                                    <td className="text-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Ceará</td>
+                                    <td className="text-right">182</td>
+                                    <td className="text-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Ceará</td>
+                                    <td className="text-right">182</td>
+                                    <td className="text-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Ceará</td>
+                                    <td className="text-right">182</td>
+                                    <td className="text-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Ceará</td>
+                                    <td className="text-right">182</td>
+                                    <td className="text-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Ceará</td>
+                                    <td className="text-right">182</td>
+                                    <td className="text-right">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Ceará</td>
+                                    <td className="text-right">182</td>
+                                    <td className="text-right">0</td>
+                                </tr>
                             </tbody>
                         </table>
                     </Table>
