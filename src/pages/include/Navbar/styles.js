@@ -10,7 +10,7 @@ export const NavBar = styled.nav`
     transition: all 1s, background-image 2s;
 
     &.navbar-dark {
-        background-color: #333;
+        background-color: #4a148c;
         color: white !important;
     }
 

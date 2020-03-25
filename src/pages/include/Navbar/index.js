@@ -32,7 +32,7 @@ export default function Navbar() {
                 <NavMenu open={nav}>
                     <ul>
                         <li><Link onClick={() => SetNav(false) } to="/quem">Casos</Link></li>
-                        <li><Link onClick={() => SetNav(false) } to="/oque">Prevenção</Link></li>
+                        <li><Link onClick={() => SetNav(false) } to="/oque">Sobre o Covid-19</Link></li>
                         <li><Link onClick={() => SetNav(false) } to="/como">Contato</Link></li>
                     </ul>
                     <button onClick={(e) => SetNav(false)} type="button">&times;</button>

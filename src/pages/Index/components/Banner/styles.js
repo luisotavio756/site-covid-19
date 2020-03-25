@@ -25,15 +25,26 @@ export const BannerImg = styled.div`
     align-items: center;
     justify-content: center;
 
+    .brasil {
+        font-weight: 300;
+        margin-top: 30px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: #CED2D9 !important;
+        font-size: 1.2rem;
+    }
+
     .text {
         /* position: absolute;
         left: 100px;
         top: 260px; */
         /* max-width: 700px; */
+        text-align: center;
         padding: 60px 4vw;
         color: white;
 
         h1{
+            /* margin-top: 30px; */
             /* text-align: justify; */
             font-size: 52px;
             font-weight: normal !important;
@@ -41,24 +52,6 @@ export const BannerImg = styled.div`
             font-weight: 700 !important;
             color: #fff;
 
-            span {
-                font-weight: bold !important;
-                color: white !important;
-                /* border-bottom: 6px solid #b20710; */
-            }
-
-            .Typewriter__wrapper {
-                color: #cccccc !important;
-            }
-        }
-
-        p{
-            font-weight: 300;
-            margin-top: 30px;
-            text-align: center;
-            letter-spacing: 1px;
-            color: #CED2D9 !important;
-            font-size: 1.2rem;
         }
 
 
@@ -74,14 +67,53 @@ export const BannerImg = styled.div`
         width: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: center;
 
         .confirmed, .dealths {
-            h1 {
-                color: #fff;
-                font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            svg {
+                color: #7d40e7;
+                font-size: 44px;
             }
 
-            width: 20%;
+            &.pulsate {
+                -webkit-animation: pulsate 0.6s ease-out;
+                -webkit-animation-iteration-count: infinite; 
+                opacity: 0.5;
+            }
+
+            @-webkit-keyframes pulsate {
+                0% { 
+                    opacity: 0.5;
+                }
+                50% { 
+                    opacity: 1.0;
+                }
+                100% { 
+                    opacity: 0.5;
+                }
+            }
+        }
+        
+        .confirmed .text, .dealths .text{
+            
+            
+            h1 {
+                text-align: left;
+                color: #7d40e7;
+                font-size: 22px;
+            }
+
+            padding: 10px;
+
+            p {
+                /* text-align: left */
+                margin-top: 0px; 
+                color: #fff;
+            }
         }
     }
 

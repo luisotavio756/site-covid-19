@@ -2,42 +2,36 @@ import React, { useEffect } from 'react';
 import { BannerImg } from './styles';
 // import Typewriter from 'typewriter-effect';
 
+// Import Icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserCheck, faHeartbeat } from '@fortawesome/free-solid-svg-icons'
+
 export default function Banner() {
 
     return (
         <BannerImg>
             <div className="text" id="text">
                 <h1>
-                    {/* <Typewriter
-                        onInit={(typewriter) => {
-                            typewriter
-                            .typeString('conectar <span>Pessoas</span>, <br/><span>Compartilhar</span> conhecimento<br />e criar <span>Oportunidades !</span>')
-                            .pauseFor(2500)
-                            .deleteAll(30)
-                            .typeString('<span>Nós somos a Kadoo !</span>')
-                            .pauseFor(2500)
-                            .start();
-                      }}
-                        
-                      options={{
-                            delay: 60,
-                            loop: true
-                      }}
-                    /> */}
                     Mapa de infecção do Coronavirus
                 </h1>
-                <p>
-                    Acompanhe os números dos casos no Brasil
-                </p>
             </div>
+            <p className="brasil">
+                Acompanhe os números dos casos no Brasil
+            </p>
             <div className="cases">
                 <div className="confirmed">
-                    <h1>3800</h1>
-                    <p>confirmados</p>
+                    <FontAwesomeIcon icon={faUserCheck} /> 
+                    <div className="text"> 
+                        <h1>3800</h1>
+                        <p>confirmados</p>
+                    </div>
                 </div>
                 <div className="dealths">
-                    <h1>3800</h1>
-                    <p>mortes</p>
+                    <FontAwesomeIcon icon={faHeartbeat} /> 
+                    <div className="text">
+                        <h1>3800</h1>
+                        <p>mortes</p>
+                    </div>
                 </div>
             </div>
         </BannerImg>

@@ -8,20 +8,7 @@
     outline: 0;
 }
 
-@font-face {
-    font-family: 'Product Sans Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Product Sans Regular'), url('assets/fontes/Product\ Sans\ Regular.ttf') format('tff');
-}
 
-
-@font-face {
-    font-family: 'Product Sans Bold';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Product Sans Bold'), url('assets/fontes/Product\ Sans\ Bold.ttf') format('tff');
-}
 
 html, body {
     font-family: 'Nunito', 'Product Sans', sans-serif !important;
