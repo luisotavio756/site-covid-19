@@ -23,6 +23,26 @@ const Index = Loadable({
     loading: Loading 
 });
 
+const Quem = Loadable({
+    loader: () => import('./pages/Quem'),
+    loading: Loading
+});
+
+const OQue = Loadable({
+    loader: () => import('./pages/OQue'),
+    loading: Loading
+});
+
+const Como = Loadable({
+    loader: () => import('./pages/Como'),
+    loading: Loading
+});
+
+const Eventos = Loadable({
+    loader: () => import('./pages/Eventos'),
+    loading: Loading
+});
+
 
 const PrivateRoute = ({ component: Component, ...rest}) => (
     <Route {...rest} render={props => (
@@ -43,6 +63,10 @@ const Routes = () => (
         {/* Routes */}
         <Switch>
             <Route exact path="/" component={Index}  />
+            <Route path="/quem" component={Quem} />
+            <Route path="/oque" component={OQue} />
+            <Route path="/como" component={Como} />
+            <Route path="/eventos" component={Eventos}  />
         </Switch>
         {/* Routes */}
         

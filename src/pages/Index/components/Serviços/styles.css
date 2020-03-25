@@ -1,0 +1,82 @@
+
+#section-2 .col-12 {
+    /* background-image: url; */
+    background-image: linear-gradient(#fff, #333), url('../../assets/img/parallax.jpg');
+	background-blend-mode: multiply;
+	/* filter: blur(1px); */
+	/* Set a specific height */
+	/* min-height: 100vh;  */
+	height: 400px;
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    padding: 3rem 0;
+    transition: all 3s linear;
+}
+
+#section-2 .card {
+    /* border: 1px solid #fff;
+    border-radius: 10px; */
+    /* border-bottom: 2px solid red; */
+    /* border-radius: 10px; */
+    padding: 10px 15px;
+    transition: transform 0.2s linear;
+    /* cursor: pointer; */
+    border: 2px solid transparent;
+}
+
+#section-2 .card:hover {
+    transform: scale(1.09);
+    cursor: pointer;
+    /*
+    box-shadow: 0 0px 8px 0 rgb(44, 44, 44); */
+    /* -webkit-transform: scale(1.4);
+          transform: scale(1.4); */
+    border: 2px solid #E5E6F0;
+    transition: all 0.3s linear; 
+}
+
+/* #section-2 .card:hover:after {
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+}
+
+#section-2 .card.has-positive-translate {
+    -webkit-transform: translate(45px);
+    transform: translate(45px);
+}
+
+#section-2 .card.has-negative-translate {
+    -webkit-transform: translate(-45px);
+    transform: translate(-45px);
+} */
+
+
+/* #section-2 .card .card-desc.overflow{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+} */
+
+#section-2 .card .link-2 {
+    /* display: none; */
+    margin: 5px 0;
+    background-color: #b20710;
+    width: 2%;
+    height: 2px;
+    border-radius: 60px;
+    -webkit-transition:width 500ms;
+	-moz-transition:width 500ms;
+	transition:width 500ms;
+    /* text-align: center; */
+}
