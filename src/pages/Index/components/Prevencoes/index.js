@@ -9,7 +9,7 @@ import { Row, Section } from './styles';
 
 export default function Prevencoes() {
     return (
-        <Row>
+        <Row id="prevention">
             <Section className="col-12">
                 <Row>
                     <div className="col-12 title">
@@ -69,10 +69,10 @@ export default function Prevencoes() {
                     <div className="col-12 info">
                         <p style={{ fontSize: 14, textAlign: "end" }}>Fonte: Secretária de Saúde Ceará | Escola de Saúde Pública do Ceará</p>
                     </div>
-                    <div className="col-12 share">
+                    {/* <div className="col-12 share">
                         <p>Compartilhe essas informações com seus amigos</p>
                         <a href=""><FontAwesomeIcon icon={faWhatsapp} size="2x"/></a>
-                    </div>
+                    </div> */}
                 </Row>
             </Section>
         </Row>

@@ -9,6 +9,7 @@ import Logo2 from '../../../assets/img/copy.png';
 import Arthur from '../../../assets/img/arthur.png';
 import Otavio from '../../../assets/img/otavio.jpg';
 import Flaviano from '../../../assets/img/flaviano.jpeg';
+import Joathan from '../../../assets/img/joathan.jpeg';
 import { Row, Card, Section, Menu } from './styles';
 
 
@@ -53,15 +54,15 @@ const array = [
     },
     {
         name: 'Joathan',
-        img: Otavio,
+        img: Joathan,
         position: 'Empresário',
         links: [
             {
-                link: '',
+                link: 'https://www.facebook.com/jonhata.starrelres',
                 icon: faFacebook
             },
             {
-                link: '',
+                link: 'https://www.instagram.com/jonhata.starrelres/',
                 icon: faInstagram
             },
         ]
@@ -85,7 +86,7 @@ const array = [
 
 export default function Footer() {
     return (
-        <Row>
+        <Row id="footer">
             <Section type="0">
                 <Row>
                     <div className="col-12 logo-text">
@@ -93,7 +94,7 @@ export default function Footer() {
                             <h1>Este projeto está sendo uma parceria entre</h1>
                         </div>
                         <div className="links">
-                            <p><a href="#">Include Jr</a> e <a href="#">Kadoo Tecnologia</a></p>
+                            <p><a href="https://includejr.com.br" target="_blank">Include Jr</a> e <a href="https://www.instagram.com/kadootecnologia/?hl=pt-br" target="_blank">Kadoo Tecnologia</a></p>
                         </div>
                     </div>
                     {/* <div className="col-12">

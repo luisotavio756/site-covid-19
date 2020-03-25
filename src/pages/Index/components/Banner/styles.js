@@ -69,7 +69,7 @@ export const BannerImg = styled.div`
         flex-direction: row;
         justify-content: center;
 
-        .confirmed, .dealths {
+        .confirmed, .dealths, .recovery{
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -98,7 +98,7 @@ export const BannerImg = styled.div`
             }
         }
         
-        .confirmed .text, .dealths .text{
+        .confirmed .text, .dealths .text, .recovery .text{
             
             
             h1 {

@@ -14,6 +14,9 @@ import Logo from '../../../assets/img/corona-logo.svg';
 // Import Styleds;
 import { NavBar, NavContent, NavMenu, Social } from './styles';
 
+// Import Scroll
+import scrollToIdOnClick from '../../../assets/js/scroll';
+
 export default function Navbar() {
     
     const [ nav, SetNav ] = useState(false);
@@ -31,9 +34,9 @@ export default function Navbar() {
                 </div>
                 <NavMenu open={nav}>
                     <ul>
-                        <li><Link onClick={() => SetNav(false) } to="/quem">Casos</Link></li>
-                        <li><Link onClick={() => SetNav(false) } to="/oque">Sobre o Covid-19</Link></li>
-                        <li><Link onClick={() => SetNav(false) } to="/como">Contato</Link></li>
+                        <li><a href="#cases" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Casos</a></li>
+                        <li><a href="#prevention" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Sobre o Covid-19</a></li>
+                        <li><a href="#footer" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Envolvidos</a></li>
                     </ul>
                     <button onClick={(e) => SetNav(false)} type="button">&times;</button>
                 </NavMenu>
