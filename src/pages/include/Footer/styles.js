@@ -5,8 +5,16 @@ export const Row = styled.div`
     flex-wrap: wrap;
 
     min-height: 60px;
-    background-color: #0d0e0f;
+    background-color: #202124;
 
+    @media screen and (max-width: 790px) {
+        [class*="col-"] {
+            /* margin: inherit 15px; */
+            padding: 0 !important;
+        }
+    } 
+    
+    
     .logo-text {
 
         @media screen and (max-width: 790px) { 
@@ -14,74 +22,58 @@ export const Row = styled.div`
                 text-align: center;
             }
         }
-        .content {
-            margin-top: 25px;
 
+
+        .title {
+           
+            h1 {
+                text-align: center;
+                color: #fff;
+            }
+        }
+
+
+        .links {
+            margin-top: 15px;
             p {
-                font-size: 16px;
-                line-height: 23px;
-                color: #999;
-                font-weight: normal;
-            }
-        }
+                text-align: center;
 
-        .social {
-            margin-top: 25px;
-            color: #999;
-            display: flex;
-            align-items: center;
-            
+                a {
+                    font-size: 18px;
+                    /* font-weight: bold; */
+                    color: #7e1bf0;
+                    transition: all 0.2s;
 
-            svg {
-                transition: all 0.2s;
-                font-size: 18px !important;
+                    &:hover {
+                        border-bottom: 2px solid #7e1bf0; 
+                    }
+                }
                 
-                &:first-of-type {
-                    margin-right: 25px;
-                }
-
-                &:hover {
-                    color: #fff;
-                }
+                color: #fff;
             }
         }
+
     }
 
-    .menu {
-        /* padding-top: 30px !important; */
-        .content {
-            margin-top: 30px;
+    .contrib {
+
+        margin-bottom: 10px;
+
+        h3 {
+            color: #fff;
         }
 
-        h1 {
-            font-weight: normal;
-            color: #eee;
+    }
+    
+    .copy {
+        /* padding-: 30px 0; */
+        text-align: center;
+
+        p {
+            color: #999;
+            padding: 0px 0 30px;
         }
     }
-
-    .contato {
-
-        .content {
-            margin-top: 30px;
-        }
-
-        h1 {
-            font-weight: normal;
-            color: #eee;
-        }
-    }
-
-    .col-12 {
-        margin-top: 35px;
-        
-        .divider {
-            width: 100%;
-            height: 1px;
-            background-color: rgba(255, 255, 255, 0.2);
-            margin-bottom: 25px;
-        }
-    }
-
 `;
 
 export const Text = styled.div`
@@ -101,7 +93,7 @@ export const Text = styled.div`
 `;
 
 export const Section = styled.div`
-    padding: ${props => props.type == 0 ? '6rem 4vw 2rem' : '0'} !important;
+    padding: ${props => props.type == 0 ? '1rem 4vw 2rem' : '0'} !important;
     margin: 0 auto;
     max-width: 1300px;
     width: 100%;
@@ -110,47 +102,59 @@ export const Section = styled.div`
     align-items: ${props => props.type == 1 ? 'center' : ''};
     justify-content: ${props => props.type == 1 ? 'center' : ''};
 
-    p {
-        text-align: ${props => props.type == 1 ? 'center' : ''};
-        color: ${props => props.type == 1 ? '#999' : ''};
-    }
-
-    .social {
-        color: ${props => props.type == 1 ? 'white' : ''};
-        display: ${props => props.type == 1 ? 'flex' : ''};
-        align-items: ${props => props.type == 1 ? 'center' : ''};
-        justify-content: ${props => props.type == 1 ? 'space-around' : ''};
-
-        svg {
-            font-size: ${props => props.type == 1 ? '18px !important' : ''};
-            margin: ${props => props.type == 1 ? '0 7px' : ''};
-        }
-    }
-
-    @media screen and (max-width: 790px) { 
-        flex-direction: ${props => props.type == 1 ? 'column' : ''};
-        align-items: ${props => props.type == 1 ? 'center' : ''};
-    }
+    
 
 `;
 
-export const Menu = styled.ul` 
-    display: flex;
-    flex-direction: column;
-    list-style: none;
+export const Card = styled.div`
+    background: #1a1a1d;
+    padding: 40px !important;
+    /* border: 2px solid #7e1bf0; */
+    border-radius: 10px;
 
-    li {
-        padding: 4px 0;
+    .img {
+        display: flex;
+        justify-content: center;
+
+        /* overflow: hidden */
+        img {
+            object-fit: cover;
+
+            border-radius: 360px;
+            width: 200px;
+            height: 200px;
+        }
     }
 
-    a {
-        color: #999;
-        /* font-weight: bold; */
-        transition: all 0.2s;
-        /* text-transform: uppercase; */
+    .desc {
+        text-align: center;
 
-        &:hover {
+        h2 {
             color: #fff;
+            margin-top: 5px;
+        }
+
+        p {
+            color: #999;
+        }
+    }
+
+    .social {
+        margin-top: 25px;
+        color: #999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            transition: all 0.2s;
+            font-size: 18px !important;
+            margin: 0 10px;
+
+
+            &:hover {
+                color: #fff;
+            }
         }
     }
 `;
