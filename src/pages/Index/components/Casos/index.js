@@ -1,24 +1,63 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+// Import Api
+import api from '../../../../services/api';
 
 import { Row, Section, Details, MapsContainer, Table } from "./styles";
 
 import Maps from "./Maps";
 
 export default function Casos() {
+    const [ loadingState, setLoadingState ] = useState(false);
+    const [ currentState, setCurrentState ] = useState([]);
+    const [ allStates, setAllStates ] = useState([]);
+
+    useEffect(() => {
+        var states = document.getElementsByClassName("estado")
+
+        for(var i = 0; i < states.length; i++) {
+            states[i].onclick = function() {
+                setLoadingState(true);
+                currentState(this.getAttribute('code'))
+            }
+        }
+        
+        async function load() {
+            const { data } = await api.get('/api/report/v1');
+            setAllStates(data.data);
+        }
+
+        async function currentState(uf = 'ce') {
+            const { data } = await api.get(`/api/report/v1/brazil/uf/${uf}`);
+
+            setCurrentState(data);
+            setLoadingState(false);
+            
+            // alert(JSON.stringify(data));
+        }
+
+
+        load();
+        currentState();
+    }, []);
     return (
         <Row id="cases">
             <Section className="col-12">
+                
                 <Row className="mobile-reverse">
                     <Details className="col-2">
-                        <h1>Ceará</h1>
-                        <div className="confirmed">
-                            <h3>Confirmados</h3>
-                            <p>182</p>
-                        </div>
-                        <div className="deaths">
-                            <h3>Mortes</h3>
-                            <p>0</p>
-                        </div>
+                        { loadingState && <div className="loader-more"></div>}
+                        { !loadingState && <div>
+                            <h1>{ currentState.state }</h1>
+                                <div className="confirmed">
+                                    <h3>Confirmados</h3>
+                                    <p>{ currentState.cases }</p>
+                                </div>
+                                <div className="deaths">
+                                    <h3>Mortes</h3>
+                                    <p>{ currentState.deaths }</p>
+                                </div>
+                        </div>}
                     </Details>
                     <MapsContainer className="col-7">
                         <h1>Selecione um estado</h1>
@@ -29,81 +68,18 @@ export default function Casos() {
                             <thead>
                                 <tr>
                                     <th>UF</th>
-                                    <th className="text-right">Confirmados</th>
-                                    <th className="text-right">Mortes</th>
+                                    <th style={{ textAlign: 'center'}}>Confirmados</th>
+                                    <th style={{ textAlign: 'center'}}>Mortes</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
-                                <tr>
-                                    <td>Ceará</td>
-                                    <td className="text-right">182</td>
-                                    <td className="text-right">0</td>
-                                </tr>
+                                { allStates.map(item => (
+                                    <tr>
+                                        <td style={{ textAlign: 'center'}}><strong>{ item.uf }</strong></td>
+                                        <td style={{ textAlign: 'center'}}>{ item.cases }</td>
+                                        <td style={{ textAlign: 'center'}}>{ item.deaths } </td>
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
                     </Table>

@@ -35,8 +35,8 @@ export const Details = styled.div`
     div {
         margin-top: 1.5rem;
         h3 {
-            font-size: 22px;
-            font-weight: 300px;
+            font-size: 20px;
+            font-weight: 300;
         }
         p {
             font-size: 24px;
@@ -64,35 +64,36 @@ export const Table = styled.div`
     justify-content: center;
 
     table {
+        width: 100%;
         margin-top: 20px;
         font-family: "Roboto";
         border-collapse: collapse;
         color: #222324;
-        thead,
-        tbody {
-            display: block;
+
+        @media screen and (min-width: 768px) {
+            thead,
+            tbody {
+                display: block;
+            }
         }
+        
         tbody {
             width: 100%;
             height: 385px;
             overflow-y: scroll;
-            tr {
-                display: block;
-                padding-right: 5px;
-            }
         }
+
         tr {
             border-bottom: 1px solid #b6babf;
-            th,
-            td {
-                width: 62px;
-            }
+            
             th {
-                padding: 0 0.5rem 0.3rem;
+                width: 33.3% !important;
                 font-size: 15px;
             }
+
             td {
-                padding: 0.5rem 0;
+                width: 85px !important;
+                padding: 0.5rem;
                 font-size: 13px;
             }
         }

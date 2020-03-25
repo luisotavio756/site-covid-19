@@ -47,7 +47,7 @@ const array = [
                 icon: faInstagram
             },
             {
-                link: '',
+                link: 'https://www.linkedin.com/in/flavianoxavier',
                 icon: faLinkedin
             }
         ]
