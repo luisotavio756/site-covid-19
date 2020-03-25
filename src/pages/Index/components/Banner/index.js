@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BannerImg } from './styles';
-import Typewriter from 'typewriter-effect';
+// import Typewriter from 'typewriter-effect';
 
 export default function Banner() {
 
@@ -8,7 +8,7 @@ export default function Banner() {
         <BannerImg>
             <div className="text" id="text">
                 <h1>
-                    <Typewriter
+                    {/* <Typewriter
                         onInit={(typewriter) => {
                             typewriter
                             .typeString('conectar <span>Pessoas</span>, <br/><span>Compartilhar</span> conhecimento<br />e criar <span>Oportunidades !</span>')
@@ -23,8 +23,22 @@ export default function Banner() {
                             delay: 60,
                             loop: true
                       }}
-                    />
+                    /> */}
+                    Mapa de infecção do Coronavirus
                 </h1>
+                <p>
+                    Acompanhe os números dos casos no Brasil
+                </p>
+            </div>
+            <div className="cases">
+                <div className="confirmed">
+                    <h1>3800</h1>
+                    <p>confirmados</p>
+                </div>
+                <div className="dealths">
+                    <h1>3800</h1>
+                    <p>mortes</p>
+                </div>
             </div>
         </BannerImg>
     );

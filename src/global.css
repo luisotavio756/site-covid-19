@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -21,10 +24,15 @@
 }
 
 html, body {
-    font-family: 'Product Sans', 'Product Sans Regular', sans-serif !important;
+    font-family: 'Nunito', 'Product Sans', sans-serif !important;
     height: 100%;
     /* overflow-y: scroll; */
     -webkit-font-smoothing: antialiased;
+}
+
+p {
+
+    font-family: 'Roboto', sans-serif !important;
 }
 
 

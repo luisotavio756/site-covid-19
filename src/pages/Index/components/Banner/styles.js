@@ -1,16 +1,12 @@
 import styled from 'styled-components';
-import Img from '../../../../assets/img/banner.webp';
-import ImgMob from '../../../../assets/img/banner-mob.jpg';
+import Img from '../../../../assets/img/banner.jpg';
 
 export const BannerImg = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 400px;
     
-    background-image: linear-gradient(#fff, #333), url(${Img});
+    background-image: linear-gradient(#fff, #222), url(${Img});
     
-    @media screen and (max-width: 790px) {
-        background-image: linear-gradient(#fff, #333), url(${ImgMob});
-    }
 
 	background-blend-mode: multiply;
 	/* filter: blur(1px); */
@@ -25,7 +21,9 @@ export const BannerImg = styled.div`
     background-size: cover;
     
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     .text {
         /* position: absolute;
@@ -40,8 +38,8 @@ export const BannerImg = styled.div`
             font-size: 52px;
             font-weight: normal !important;
             letter-spacing: 1px;
-            font-weight: normal;
-            color: #cccccc;
+            font-weight: 700 !important;
+            color: #fff;
 
             span {
                 font-weight: bold !important;
@@ -55,55 +53,36 @@ export const BannerImg = styled.div`
         }
 
         p{
-            padding-left: 0 !important;
-            padding-right: 0 !important;
-            text-align: justify;
+            font-weight: 300;
+            margin-top: 30px;
+            text-align: center;
             letter-spacing: 1px;
-            color: #999 !important;
+            color: #CED2D9 !important;
             font-size: 1.2rem;
         }
 
-        button{
-            margin-top: 10px;
-            /* height: 56px; */
-            text-decoration: none;
-            /* padding-left: 50px !important; */
-        
-            padding: 12px 36px;
-            border: none !important;
-            color:#eee !important;
-            background-color: #b20710;
-            font-size: 1.3rem;
-            font-weight: normal;
-            border-radius: 60px !important;
-            cursor: pointer;
-            transition: all 0.2s linear;
-
-            &:hover {
-                opacity: 0.9;
-                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-                
-            }
-            
-        }
 
         @media screen and (max-width: 790px) {
             h1{
                 font-size: 36px;
+            }  
+        } 
+    }
+
+    .cases {
+        padding: 0 4vw;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        .confirmed, .dealths {
+            h1 {
+                color: #fff;
+                font-size: 20px;
             }
 
-            p {
-                text-align: left;
-                /* display: none; */
-            }
-            
-            button {
-                font-weight: bold !important;
-                width: 100% !important;
-            }
+            width: 20%;
         }
-
-        
     }
 
 `;

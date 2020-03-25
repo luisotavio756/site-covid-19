@@ -24,24 +24,24 @@
     <script>
     
         var prevScrollpos = window.pageYOffset;
-        var height = document.getElementById("social").offsetHeight;
+        var height = document.getElementById("navbar").offsetHeight;
 
         window.onscroll = function() {
             var currentScrollPos = window.pageYOffset;
 
-            // if (currentScrollPos > 500) {
-            //     document.getElementsByTagName("nav")[0].classList.add('navbar-dark');
-            //     // document.querySelector(".scroll-top").style.display = 'block';
-            // }else{
-            //     document.getElementsByTagName("nav")[0].classList.remove('navbar-dark');
-            //     // document.querySelector(".scroll-top").style.display = 'none';
-            // }
+            if (currentScrollPos > 400) {
+                document.getElementById("navbar").classList.add('navbar-dark');
+                // document.querySelector(".scroll-top").style.display = 'block';
+            }else{
+                document.getElementById("navbar").classList.remove('navbar-dark');
+                // document.querySelector(".scroll-top").style.display = 'none';
+            }
 
            
             if (prevScrollpos > currentScrollPos) {
-                document.getElementById("social").style.marginTop = "0";
+                document.getElementById("navbar").style.marginTop = "0";
             } else {
-                document.getElementById("social").style.marginTop = `-${height}px`;
+                document.getElementById("navbar").style.marginTop = `-${height}px`;
             }
             
 

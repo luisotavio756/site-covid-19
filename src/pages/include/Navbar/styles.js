@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const NavBar = styled.nav`
     position: fixed;
     width: 100%;   
-    background-color: rgba(0, 0, 0, 0.6);
+    /* background-color: rgba(0, 0, 0, 0.6); */
     /* box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.3); */
     z-index: 9999;
     transition: all 1s, background-image 2s;
@@ -43,11 +43,20 @@ export const NavContent = styled.div`
         align-items: center;
 
         .logo {
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                font-size: 20px;
+            }
+
             padding-right: 15px;
             /* border-right: 1px solid #999; */
 
             img{
-                width: 100%;
+                filter: invert(1);
+                width: 50px;
                 height: auto;
             }
         }
@@ -102,7 +111,7 @@ export const NavMenu = styled.div`
 
         li {
             /* letter-spacing: -1px; */
-            font-size: 13px;
+            font-size: 16px;
             font-weight: 700;
             padding: 10px 20px;
             color: white;
