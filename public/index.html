@@ -2,19 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="shortcut icon" href="../src/assets/img/arthur.png" type="image/x-icon"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#7e1bf0" />
-        <meta
-            name="description"
-            content="Covid 19 - Informações"
-        />
+        <meta name="description" content="Covid 19 - Informações" />
         <link rel="apple-touch-icon" href="../src/assets/img/corona-logo.svg" />
 
         <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
-        
 
-        <title>Covid-19</title>
+        <title>Covid-19 Info</title>
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -22,7 +17,6 @@
         <!-- <div class="loader"></div> -->
     </body>
     <script>
-    
         var prevScrollpos = window.pageYOffset;
         var height = document.getElementById("navbar").offsetHeight;
 
@@ -30,24 +24,25 @@
             var currentScrollPos = window.pageYOffset;
 
             if (currentScrollPos > 400) {
-                document.getElementById("navbar").classList.add('navbar-dark');
+                document.getElementById("navbar").classList.add("navbar-dark");
                 // document.querySelector(".scroll-top").style.display = 'block';
-            }else{
-                document.getElementById("navbar").classList.remove('navbar-dark');
+            } else {
+                document
+                    .getElementById("navbar")
+                    .classList.remove("navbar-dark");
                 // document.querySelector(".scroll-top").style.display = 'none';
             }
 
-           
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById("navbar").style.marginTop = "0";
             } else {
-                document.getElementById("navbar").style.marginTop = `-${height}px`;
+                document.getElementById(
+                    "navbar"
+                ).style.marginTop = `-${height}px`;
             }
-            
 
             prevScrollpos = currentScrollPos;
-            
-        } 
+        };
         // alert(height)
     </script>
     <!-- <script src="../src/assets/js/jquery.js"></script> -->
