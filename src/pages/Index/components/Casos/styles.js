@@ -10,7 +10,29 @@ export const Section = styled.div`
     padding: 3rem 4vw !important;
     max-width: 1300px;
 
+    #select {
+        display: none;
+    }
+
+    .select {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        select {
+            font-family: 'Nunito', sans-serif;
+            font-size: 18px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    }
+
     @media screen and (max-width: 768px) {
+        #select {
+            display: block;
+        }
+
         .mobile-reverse {
             h1 {
                 font-size: 20px;
@@ -52,6 +74,7 @@ export const Details = styled.div`
 `;
 
 export const MapsContainer = styled.div`
+
     h1 {
         font-size: 30px;
         display: flex;

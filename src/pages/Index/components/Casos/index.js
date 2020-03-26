@@ -14,6 +14,17 @@ export default function Casos() {
 
     useEffect(() => {
         var states = document.getElementsByClassName("estado")
+        var ufs = document.getElementsByClassName("select-uf");
+
+        document.getElementById('select-uf').addEventListener("change", function(){
+            // var el = document.querySelector('select[name="exercicio"] option[selected]').getAttribute('value');
+            var i = this.value
+            // alert(i)
+            setLoadingState(true);
+            currentState(i);
+            
+        
+        });
 
         for(var i = 0; i < states.length; i++) {
             states[i].onclick = function() {
@@ -21,6 +32,7 @@ export default function Casos() {
                 currentState(this.getAttribute('code'))
             }
         }
+
         
         async function load() {
             const { data } = await api.get('/api/report/v1');
@@ -40,6 +52,37 @@ export default function Casos() {
         load();
         currentState();
     }, []);
+
+    const ufs = [
+        {nome: "Acre", "sigla": "AC"},
+        {nome: "Alagoas", "sigla": "AL"},
+        {nome: "Amapá", "sigla": "AP"},
+        {nome: "Amazonas", "sigla": "AM"},
+        {nome: "Bahia", "sigla": "BA"},
+        {nome: "Ceará", "sigla": "CE"},
+        {nome: "Distrito Federal", "sigla": "DF"},
+        {nome: "Espírito Santo", "sigla": "ES"},
+        {nome: "Goiás", "sigla": "GO"},
+        {nome: "Maranhão", "sigla": "MA"},
+        {nome: "Mato Grosso", "sigla": "MT"},
+        {nome: "Mato Grosso do Sul", "sigla": "MS"},
+        {nome: "Minas Gerais", "sigla": "MG"},
+        {nome: "Pará", "sigla": "PA"},
+        {nome: "Paraíba", "sigla": "PB"},
+        {nome: "Paraná", "sigla": "PR"},
+        {nome: "Pernambuco", "sigla": "PE"},
+        {nome: "Piauí", "sigla": "PI"},
+        {nome: "Rio de Janeiro", "sigla": "RJ"},
+        {nome: "Rio Grande do Norte", "sigla": "RN"},
+        {nome: "Rio Grande do Sul", "sigla": "RS"},
+        {nome: "Rondônia", "sigla": "RO"},
+        {nome: "Roraima", "sigla": "RR"},
+        {nome: "Santa Catarina", "sigla": "SC"},
+        {nome: "São Paulo", "sigla": "SP"},
+        {nome: "Sergipe", "sigla": "SE"},
+        {nome: "Tocantins", "sigla": "TO"}
+    ];
+
     return (
         <Row id="cases">
             <Section className="col-12">
@@ -62,6 +105,17 @@ export default function Casos() {
                     <MapsContainer className="col-7">
                         <h1>Selecione um estado</h1>
                         <Maps />
+                        <Row id="select">
+                            <div className="col-12 select">
+                                <select name="" id="select-uf">
+                                    <option selected disabled>Selecione um Estado</option>
+                                    { ufs.map(item => (
+                                        <option value={item.sigla}>{ item.nome }</option>
+                                    ))}
+                                </select>
+                            </div>
+                        </Row>
+
                     </MapsContainer>
                     <Table className="col-3">
                         <table>
@@ -82,7 +136,8 @@ export default function Casos() {
                                 ))}
                             </tbody>
                         </table>
-                    </Table>
+                    </Table>                
+                    
                 </Row>
             </Section>
         </Row>
