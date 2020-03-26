@@ -53,7 +53,7 @@ const array = [
         ]
     },
     {
-        name: 'Joathan',
+        name: 'Jonhata',
         img: Joathan,
         position: 'Empresário',
         links: [
