@@ -33,11 +33,11 @@ export default function Banner() {
         <BannerImg>
             <div className="text" id="text">
                 <h1>
-                    Mapa de infecção do Coronavirus
+                    Mapa de infecção do Coronavírus
                 </h1>
             </div>
             <p className="brasil">
-                Acompanhe os números dos casos no Brasil
+                Acompanhe os números no Brasil
             </p>
             { loading && <div className="loader-more" style={{ marginTop: 5}}></div>}
             { !loading && 

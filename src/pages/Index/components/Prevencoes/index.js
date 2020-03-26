@@ -17,11 +17,11 @@ export default function Prevencoes() {
                         <div className="divider"></div>
                     </div>
                     <div className="col-12 info">
-                        <h1>1. O que é o Covid-19(Coronavirus) ?</h1>
+                        <h1>1. O que é o Covid-19(Coronavírus)?</h1>
                         <p>Os coronavírus são uma grande família viral, que causam infecções respiratórias em seres humanos e em animais. Em 80% dos casos, infecções por coronavírus causam doenças respiratórias leves a moderadas, semelhantes a um resfriado comum.</p>
                     </div>
                     <div className="col-12 info">
-                        <h1>2. Como se prevenir contra o Covid-19 ?</h1>
+                        <h1>2. Como se prevenir contra o Covid-19?</h1>
                         <p>
                             As principais orientações são:
                         </p>
@@ -39,7 +39,7 @@ export default function Prevencoes() {
                         </p>
                     </div>
                     <div className="col-12 info">
-                        <h1>3. Quais os sintomas do Covid-19 ?</h1>
+                        <h1>3. Quais os sintomas do Covid-19?</h1>
                         <p>
                             Os sinais e sintomas clínicos são principalmente respiratórios, semelhantes aos de um resfriado comum. Em casos mais graves, podem também causar infecção do trato respiratório inferior, como as pneumonias.
                         </p>
@@ -47,13 +47,13 @@ export default function Prevencoes() {
                         <p style={{ fontSize: 14, textAlign: "end" }}>Fonte: Secretaria de Saúde do Ceará</p>
                     </div>
                     <div className="col-12 info">
-                        <h1>4. Internação ou isolamento domiciliar ?</h1>
+                        <h1>4. Internação ou isolamento domiciliar?</h1>
                         <p>
                             O isolamento domiciliar, assim como o distanciamento social, tem sido adotado conforme decreto do Governo do Ceará e recomendações da Secretaria Estadual de Saúde como medidas para evitar a propagação do vírus. Reforçam-se as recomendações de distanciamento social e redução da mobilidade das pessoas. Recomenda-se a todas as pessoas sair de casa apenas para atividades essenciais. Todas as pessoas com mais de 60 anos deverão evitar comparecimento ao trabalho ou demais ambientes fechados. Recomenda-se sair de casa apenas para atividades essenciais (mercado, farmácia serviços de saúde) que não possam ser realizadas por outra pessoa do domicílio/cuidador. Pessoas apresentando sintomas gripais e seus contatos domiciliares devem permanecer em isolamento domiciliar por 14 dias. Já a internação hospitalar ocorre somente em casos graves da doença.
                         </p>
                     </div>
                     <div className="col-12 info">
-                        <h1>5. O que é transmissão comunitária ?</h1>
+                        <h1>5. O que é transmissão comunitária?</h1>
                         <p>
                             É a ocorrência de casos sem vínculo a um caso confirmado, em área definida. Ou seja, é aquela que não é possível rastrear qual a origem da infecção, indicando que o vírus circula entre as pessoas independente de terem viajado ou não para o exterior.
                         </p>

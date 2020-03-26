@@ -26,7 +26,7 @@ export default function Navbar() {
             <NavContent>
                 <div className="brand">
                     <div className="logo">
-                        <Link to="/"><img src={Logo} alt=""/> Covid-19</Link>
+                        <Link to="/"><img src={Logo} alt=""/> Corona Info</Link>
                     </div>
                 </div>
                 <div className="menu-expand" onClick={(e) => SetNav(true)}>
