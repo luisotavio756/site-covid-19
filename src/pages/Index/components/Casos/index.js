@@ -101,35 +101,6 @@ export default function Casos() {
             <Section className="col-12">
                 
                 <Row className="mobile-reverse">
-                    <Details className="col-2">
-                        { loadingState && <div className="loader-more"></div>}
-                        { !loadingState && <div>
-                            <h1>{ nameState }</h1>
-                                <div className="confirmed">
-                                    <h3>Confirmados</h3>
-                                    <p>{ currentState.confirmed }</p>
-                                </div>
-                                <div className="deaths">
-                                    <h3>Mortes</h3>
-                                    <p>{ currentState.deaths }</p>
-                                </div>
-                        </div>}
-                    </Details>
-                    <MapsContainer className="col-7">
-                        <h1>Selecione um estado</h1>
-                        <Maps />
-                        <Row id="select">
-                            <div className="col-12 select">
-                                <select name="" id="select-uf">
-                                    <option selected disabled>Selecione um Estado</option>
-                                    { ufs.map(item => (
-                                        <option value={item.sigla}>{ item.nome }</option>
-                                    ))}
-                                </select>
-                            </div>
-                        </Row>
-
-                    </MapsContainer>
                     <Table className="col-3">
                         <table>
                             <thead>
@@ -149,8 +120,42 @@ export default function Casos() {
                                 ))}
                             </tbody>
                         </table>
-                    </Table>                
-                    
+                    </Table>   
+                    <MapsContainer className="col-6">
+                        <h1>Selecione um estado</h1>
+                        <Maps />
+                        <Row id="select">
+                            <div className="col-12 select">
+                                <select name="" id="select-uf">
+                                    <option selected disabled>Selecione um Estado</option>
+                                    { ufs.map(item => (
+                                        <option value={item.sigla}>{ item.nome }</option>
+                                    ))}
+                                </select>
+                            </div>
+                        </Row>
+
+                    </MapsContainer> 
+                    <Details className="col-3">
+                        { loadingState && <div className="loader-more"></div>}
+                        { !loadingState && <div>
+                            <h1>{ nameState }</h1>
+                                <div className="confirmed">
+                                    <h3>Confirmados</h3>
+                                    <p>{ currentState.confirmed }</p>
+                                </div>
+                                <div className="deaths">
+                                    <h3>Mortes</h3>
+                                    <p>{ currentState.deaths }</p>
+                                </div>
+                        </div>}
+                    </Details>            
+                </Row>
+                <Row id="fontes">
+                    <div className="col-12">
+                        <p><span>*Atenção*:</span> Os números podem ter diferença em relação aos números do Ministério da Saúde pela indisponibilidade da plataforma online, fazendo com que os dados das secretarias de cada estado sejam mais próximos da realidade.</p>
+                        <p className="fontes"><span>Fontes:</span> Dados consultados pela plataforma de monitoramento <a href="https://labs.wesleycota.com/sarscov2/br/" target="_blank">https://labs.wesleycota.com/sarscov2/br/</a> e analisados por nossos pesquisadores pelas secretárias de saúde do Acre, Alagoas, Amapá, Amazonas, Bahia, Ceará, Distrito Federal, Espírito Santo, Goiás, Maranhão, Mato Grosso, Mato Grosso do Sul, Minas Gerais, Pará, Paraíba, Paraná, Pernambuco, Piauí, Rio de Janeiro, Rio Grande do Norte, Rio Grande do Sul, Rondônia, Roraima, Santa Catarina, São Paulo, Sergipe e Tocantins. </p>
+                    </div>
                 </Row>
             </Section>
         </Row>

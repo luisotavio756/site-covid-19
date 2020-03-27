@@ -1,8 +1,9 @@
 import React from 'react';
 
 // Import Icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookMedical, faHospital } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 import Img from '../../../../assets/img/covid-table.jpeg';
 import { Row, Section } from './styles';
@@ -61,9 +62,8 @@ export default function Prevencoes() {
                     <div className="col-12 info links">
                         <h1>6. Links úteis</h1>
                         <p>
-                            <a href="https://unidades.saude.ce.gov.br/" target="_blank">Redes De Assistência Médica ao Covid-19</a><br />
-                            <a href="https://servicounidades.corona.maps.integrasus.saude.ce.gov.br/" target="_blank">Corona Maps</a><br />
-                            <a href="https://coronavirus.ceara.gov.br/boletins/" target="_blank">Mapa com as unidades de Assistêcia</a>
+                            <a href="https://unidades.saude.ce.gov.br/" target="_blank"><FontAwesomeIcon icon={faHospital} /> Unidades de Saúde do Ceará</a><br />
+                            <a href="https://coronavirus.ceara.gov.br/boletins/" target="_blank"><FontAwesomeIcon icon={faBookMedical} /> Boletins da Secretaria de Saúde do Estado do Ceará</a>
                         </p>
                     </div>
                     <div className="col-12 info">

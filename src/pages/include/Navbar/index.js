@@ -36,7 +36,9 @@ export default function Navbar() {
                     <ul>
                         <li><a href="#cases" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Casos</a></li>
                         <li><a href="#prevention" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Sobre o Covid-19</a></li>
-                        <li><a href="#footer" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Envolvidos</a></li>
+                        <li><a href="#help" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Ajude no Combate</a></li>
+                        <li><a href="#footer" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Doação</a></li>
+                        {/* <li><a href="#footer" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Envolvidos</a></li> */}
                     </ul>
                     <button onClick={(e) => SetNav(false)} type="button">&times;</button>
                 </NavMenu>

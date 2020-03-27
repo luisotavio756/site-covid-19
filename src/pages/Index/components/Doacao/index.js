@@ -9,19 +9,19 @@ import { Row, Section } from './styles';
 
 export default function Doacao() {
     return (
-        <Row>
+        <Row id="help">
             <Section className="col-12">
                 <Row>
                     <div className="col-12 title">
                         <h1>Ajude no Combate ao Covid-19</h1>
                         <div className="divider"></div>
                     </div>
-                    <div className="col-8 info" style={{ margin: '15px auto'}}>
+                    {/* <div className="col-8 info" style={{ margin: '15px auto'}}>
                         <h1>Por Que?</h1>
                         <p>Além de afetar diretamente a saúde das pessoas, o coronavírus vem afetando a vida econômica de milhares de famílias de baixa renda, uma vez que a maioria das atividades empresariais foram suspendidas. Segundo o Ministério da Economia, cerca de 50% dos empregos no Brasil, são informais e isso faz com que a fragilidade das pessoas com baixa renda seja ainda mais acentuada, ja que eles estão em maioria inseridos nessa porcentagem.</p>
                         <p>Portanto, além de fornecer informações sobre o coronavírus, tambem queremos ajudar pessoas carentes que estão sofrendo com essa situação.</p>
-                    </div>
-                    <div className="col-8 info" style={{ margin: '15px auto'}}>
+                    </div> */}
+                    {/* <div className="col-8 info" style={{ margin: '15px auto'}}>
                         <h1>Como?</h1>
                         <p>Segue abaixo a lista de necessidades: </p>
                         <p style={{ marginTop: 5}}>
@@ -52,7 +52,7 @@ export default function Doacao() {
                     <div className="col-8 info" style={{ margin: '15px auto'}}>
                         <p style={{ fontSize: 15, textAlign: "center", fontStyle: "italic" }}>"Aquele que caminha sozinho pode até ir <b>mais rápido</b>, mas aquele que vai acompanhado, com certera irá <b>mais longe.</b>"</p>
                         <p style={{ fontSize: 13, textAlign: "center" }}>- Clarice Lispector</p>
-                    </div>
+                    </div> */}
                 </Row>
             </Section>
         </Row>

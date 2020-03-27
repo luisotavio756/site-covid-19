@@ -6,9 +6,11 @@ import { faFacebook, faInstagram, faLinkedin, faGithub } from '@fortawesome/free
 
 import Logo from '../../../assets/img/kadoo.png';
 import Logo2 from '../../../assets/img/copy.png';
-import Arthur from '../../../assets/img/arthur.png';
+import Aline from '../../../assets/img/aline.jpeg';
 import Otavio from '../../../assets/img/otavio.jpg';
 import Flaviano from '../../../assets/img/flaviano.jpeg';
+import Victoria from '../../../assets/img/victoria.jpeg';
+import Lucas from '../../../assets/img/lucas.jpeg';
 import Joathan from '../../../assets/img/joathan.jpeg';
 import { Row, Card, Section, Menu } from './styles';
 
@@ -55,7 +57,7 @@ const array = [
     {
         name: 'Jonhata',
         img: Joathan,
-        position: 'Empresário',
+        position: 'Empreendedor',
         links: [
             {
                 link: 'https://www.facebook.com/jonhata.starrelres',
@@ -63,6 +65,59 @@ const array = [
             },
             {
                 link: 'https://www.instagram.com/jonhata.starrelres/',
+                icon: faInstagram
+            },
+        ]
+    },
+    {
+        name: 'Aline',
+        img: Aline,
+        position: 'Pesquisadora',
+        links: [
+            {
+                link: 'http://www.linkedin.com/in/aline-h-alves',
+                icon: faLinkedin
+            },
+            {
+                link: 'https://www.instagram.com/_aliness2',
+                icon: faInstagram
+            },
+        ]
+    },
+    {
+        name: 'Victória',
+        img: Victoria,
+        position: 'Pesquisadora',
+        links: [
+            {
+                link: 'https://www.linkedin.com/in/anna-victória-ferreira-201b4a161',
+                icon: faGithub
+            },
+            {
+                link: 'https://github.com/Annavictoriaferreira',
+                icon: faLinkedin
+            },
+            {
+                link: 'https://instagram.com/annavictoriaferreira_?igshid=1bdrh2pnsxk5o',
+                icon: faInstagram
+            },
+        ]
+    },
+    {
+        name: 'Lucas',
+        img: Lucas,
+        position: 'Pesquisador',
+        links: [
+            {
+                link: 'https://github.com/lucascc19',
+                icon: faGithub
+            },
+            {
+                link: 'https://www.linkedin.com/in/lucas-oliveira-4617101a0/',
+                icon: faLinkedin
+            },
+            {
+                link: 'https://www.instagram.com/llucasoliv/',
                 icon: faInstagram
             },
         ]

@@ -3,6 +3,41 @@ import styled from "styled-components";
 export const Row = styled.div`
     display: flex;
     flex-wrap: wrap;
+
+    &#fontes {
+        margin-top: 10px;
+        
+        p {
+            font-size: 15px; 
+            line-height: 22px;
+            color: #666;
+            text-align: justify;
+
+            span {
+                font-weight: bold;
+                color: #7e1bf0;
+            }
+
+            &.fontes {
+               
+                margin-top: 5px;
+
+                span {
+                    font-weight: bold;
+                    color: #555;
+                }
+
+                a {
+                    color: #7e1bf0;
+                    transition: all 0.2s;
+                    
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
 `;
 
 export const Section = styled.div`
