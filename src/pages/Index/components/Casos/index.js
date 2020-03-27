@@ -7,10 +7,43 @@ import { Row, Section, Details, MapsContainer, Table } from "./styles";
 
 import Maps from "./Maps";
 
+const ufs = [
+    {nome: "Acre", sigla: "AC"},
+    {nome: "Alagoas", sigla: "AL"},
+    {nome: "Amapá", sigla: "AP"},
+    {nome: "Amazonas", sigla: "AM"},
+    {nome: "Bahia", sigla: "BA"},
+    {nome: "Ceará", sigla: "CE"},
+    {nome: "Distrito Federal", sigla: "DF"},
+    {nome: "Espírito Santo", sigla: "ES"},
+    {nome: "Goiás", sigla: "GO"},
+    {nome: "Maranhão", sigla: "MA"},
+    {nome: "Mato Grosso", sigla: "MT"},
+    {nome: "Mato Grosso do Sul", sigla: "MS"},
+    {nome: "Minas Gerais", sigla: "MG"},
+    {nome: "Pará", sigla: "PA"},
+    {nome: "Paraíba", sigla: "PB"},
+    {nome: "Paraná", sigla: "PR"},
+    {nome: "Pernambuco", sigla: "PE"},
+    {nome: "Piauí", sigla: "PI"},
+    {nome: "Rio de Janeiro", sigla: "RJ"},
+    {nome: "Rio Grande do Norte", sigla: "RN"},
+    {nome: "Rio Grande do Sul", sigla: "RS"},
+    {nome: "Rondônia", sigla: "RO"},
+    {nome: "Roraima", sigla: "RR"},
+    {nome: "Santa Catarina", sigla: "SC"},
+    {nome: "São Paulo", sigla: "SP"},
+    {nome: "Sergipe", sigla: "SE"},
+    {nome: "Tocantins", sigla: "TO"}
+];
+
 export default function Casos() {
     const [ loadingState, setLoadingState ] = useState(false);
     const [ currentState, setCurrentState ] = useState([]);
     const [ allStates, setAllStates ] = useState([]);
+    const [ nameState, setName ] = useState('');
+    const [ uF, setUf ] = useState(ufs);
+
 
     useEffect(() => {
         var states = document.getElementsByClassName("estado")
@@ -35,17 +68,25 @@ export default function Casos() {
 
         
         async function load() {
-            const { data } = await api.get('/api/report/v1');
-            setAllStates(data.data);
+            const { data } = await api.get('/cases');
+            setAllStates(data);
         }
 
         async function currentState(uf = 'ce') {
-            const { data } = await api.get(`/api/report/v1/brazil/uf/${uf}`);
+            // const { data } = await api.get(`/api/report/v1/brazil/uf/`);
 
-            setCurrentState(data);
+            // setCurrentState(data);
+            // setLoadingState(false);
+
+            const { data }  = await api.get(`/cases/${uf}`);
+
+            const name = uF.filter(item => item.sigla === uf.toUpperCase());
+            // alert(name)
+            setName(name[0].nome);
+            setCurrentState(data[0]);
             setLoadingState(false);
             
-            // alert(JSON.stringify(data));
+            // alert(JSON.stringify(name[0]));
         }
 
 
@@ -53,35 +94,7 @@ export default function Casos() {
         currentState();
     }, []);
 
-    const ufs = [
-        {nome: "Acre", "sigla": "AC"},
-        {nome: "Alagoas", "sigla": "AL"},
-        {nome: "Amapá", "sigla": "AP"},
-        {nome: "Amazonas", "sigla": "AM"},
-        {nome: "Bahia", "sigla": "BA"},
-        {nome: "Ceará", "sigla": "CE"},
-        {nome: "Distrito Federal", "sigla": "DF"},
-        {nome: "Espírito Santo", "sigla": "ES"},
-        {nome: "Goiás", "sigla": "GO"},
-        {nome: "Maranhão", "sigla": "MA"},
-        {nome: "Mato Grosso", "sigla": "MT"},
-        {nome: "Mato Grosso do Sul", "sigla": "MS"},
-        {nome: "Minas Gerais", "sigla": "MG"},
-        {nome: "Pará", "sigla": "PA"},
-        {nome: "Paraíba", "sigla": "PB"},
-        {nome: "Paraná", "sigla": "PR"},
-        {nome: "Pernambuco", "sigla": "PE"},
-        {nome: "Piauí", "sigla": "PI"},
-        {nome: "Rio de Janeiro", "sigla": "RJ"},
-        {nome: "Rio Grande do Norte", "sigla": "RN"},
-        {nome: "Rio Grande do Sul", "sigla": "RS"},
-        {nome: "Rondônia", "sigla": "RO"},
-        {nome: "Roraima", "sigla": "RR"},
-        {nome: "Santa Catarina", "sigla": "SC"},
-        {nome: "São Paulo", "sigla": "SP"},
-        {nome: "Sergipe", "sigla": "SE"},
-        {nome: "Tocantins", "sigla": "TO"}
-    ];
+   
 
     return (
         <Row id="cases">
@@ -91,10 +104,10 @@ export default function Casos() {
                     <Details className="col-2">
                         { loadingState && <div className="loader-more"></div>}
                         { !loadingState && <div>
-                            <h1>{ currentState.state }</h1>
+                            <h1>{ nameState }</h1>
                                 <div className="confirmed">
                                     <h3>Confirmados</h3>
-                                    <p>{ currentState.cases }</p>
+                                    <p>{ currentState.confirmed }</p>
                                 </div>
                                 <div className="deaths">
                                     <h3>Mortes</h3>
@@ -130,7 +143,7 @@ export default function Casos() {
                                 { allStates.map(item => (
                                     <tr>
                                         <td style={{ textAlign: 'center'}}><strong>{ item.uf }</strong></td>
-                                        <td style={{ textAlign: 'center'}}>{ item.cases }</td>
+                                        <td style={{ textAlign: 'center'}}>{ item.confirmed }</td>
                                         <td style={{ textAlign: 'center'}}>{ item.deaths } </td>
                                     </tr>
                                 ))}

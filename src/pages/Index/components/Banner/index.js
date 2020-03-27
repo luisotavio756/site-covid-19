@@ -14,14 +14,15 @@ export default function Banner() {
     const [ deaths, setDealths ] = useState(0);
 
     useEffect(() => {
+        // alert('kkkkk')
         async function load() {
-            const { data } = await api.get('/api/report/v1/brazil');
+            let { data }  = await api.get('/cases/br');
+            data = data[0];
 
-
-            setConfirmed(data.data.confirmed);
-            setDealths(data.data.deaths);
+            setConfirmed(data.confirmed);
+            setDealths(data.deaths);
             setLoading(false);
-            // alert(JSON.stringify(data.data))
+            // alert(JSON.stringify(data[0]))
         }
 
         setLoading(true);

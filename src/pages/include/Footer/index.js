@@ -67,21 +67,7 @@ const array = [
             },
         ]
     },
-    {
-        name: 'Arthur R.',
-        img: Arthur,
-        position: 'Desenvolvedor da API',
-        links: [
-            {
-                link: 'https://github.com/devarthurribeiro/',
-                icon: faGithub
-            },
-            {
-                link: 'https://www.linkedin.com/in/arthur-ribeiro-564263150/',
-                icon: faLinkedin
-            }
-        ]
-    },
+    
 ];
 
 export default function Footer() {
