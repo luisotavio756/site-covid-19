@@ -13,7 +13,7 @@ export default function IKnow() {
         <div className="col-6 p-0" style={{ margin: '0 auto'}}>
             <Row>
                 <div className="col-12 title">
-                    <h4>Nesta seção você poderá nos informar sobre alguem que está precisando de ajuda, mas que não tem acesso a internet ou não consegue acessar nossa página por algum motivo. Esse é um espaço de ajuda ao próximo.</h4>
+                    <h4>Aqui funciona um Feed de pessoas necessitadas, onde você poderá ver e conhecer quem está precisando de ajuda</h4>
                     <div className="divider"></div>
                 </div>
             </Row>

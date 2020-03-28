@@ -121,8 +121,10 @@ export const Card = styled.div`
             object-fit: cover;
 
             border-radius: 360px;
-            width: 200px;
+            width: 100%;
+            max-width: 200px;
             height: 200px;
+            /* max-height: 200px; */
         }
     }
 

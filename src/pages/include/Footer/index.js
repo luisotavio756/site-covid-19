@@ -10,6 +10,8 @@ import Aline from '../../../assets/img/aline.jpeg';
 import Otavio from '../../../assets/img/otavio.jpg';
 import Flaviano from '../../../assets/img/flaviano.jpeg';
 import Victoria from '../../../assets/img/victoria.jpeg';
+import Joao from '../../../assets/img/joao.jpeg';
+import Gilberto from '../../../assets/img/gilberto.jpeg';
 import Lucas from '../../../assets/img/lucas.jpeg';
 import Joathan from '../../../assets/img/joathan.jpeg';
 import { Row, Card, Section, Menu } from './styles';
@@ -118,6 +120,40 @@ const array = [
             },
             {
                 link: 'https://www.instagram.com/llucasoliv/',
+                icon: faInstagram
+            },
+        ]
+    },
+    {
+        name: 'Gilberto',
+        img: Gilberto,
+        position: 'Pesquisador',
+        links: [
+            {
+                link: 'https://www.linkedin.com/in/gilberto-junior-rodrigues-de-oliveira-333a09181/',
+                icon: faLinkedin
+            },
+            {
+                link: 'https://www.instagram.com/_gilbertojnr/?hl=en',
+                icon: faInstagram
+            },
+        ]
+    },
+    {
+        name: 'João Emerson',
+        img: Joao,
+        position: 'Pesquisador',
+        links: [
+            {
+                link: 'https://github.com/joaoemersonufc',
+                icon: faGithub
+            },
+            {
+                link: 'https://www.linkedin.com/in/joaoemerson-profissional/',
+                icon: faLinkedin
+            },
+            {
+                link: 'https://www.instagram.com/joaoemerson._/',
                 icon: faInstagram
             },
         ]
