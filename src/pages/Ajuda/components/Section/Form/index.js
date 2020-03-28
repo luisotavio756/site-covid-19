@@ -18,11 +18,11 @@ export default function Form() {
             </Row>
             <FormHelp onSubmit={() => alert('Form Enviado !')}>
                 <div className="input-block">
-                    <label htmlFor="">Seu Nome <sup>*</sup></label>
+                    <label htmlFor="">Seu Nome</label>
                     <input type="text" placeholder="Digite seu Nome..." />
                 </div>
                 <div className="input-block">
-                    <label htmlFor="">Seu Número <sup>*</sup></label>
+                    <label htmlFor="">Seu Número</label>
                     <input type="tel" placeholder="Digite seu Telefone..." />
                 </div>
                 <div className="input-block">

@@ -19,12 +19,12 @@ export default function Section() {
         {
             id: 'form',
             name: 'Posso Ajudar',
-            status: 0
+            status: 1
         },
         {
             id: 'feed',
             name: "Feed de Ajuda",
-            status: 1
+            status: 0
         },
         {
             id: 'iknow',
@@ -44,7 +44,7 @@ export default function Section() {
 
  
     useEffect(() => {
-        setContent(array[1].id);
+        setContent(array[0].id);
         setItens(array);
 
     }, []);

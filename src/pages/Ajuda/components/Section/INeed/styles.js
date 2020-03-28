@@ -28,6 +28,7 @@ export const Row = styled.div`
     }
 
     .title {
+        text-align: center;
         padding: 0 !important;
 
         h4 {
