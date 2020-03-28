@@ -73,13 +73,13 @@ export const Section = styled.div`
                 font-size: 20px;
             }
             div:nth-child(1) {
-                order: 2;
+                order: 3;
             }
             div:nth-child(2) {
                 order: 1;
             }
             div:nth-child(3) {
-                order: 3;
+                order: 2;
             }
         }
     }

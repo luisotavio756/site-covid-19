@@ -68,5 +68,24 @@ export const Section = styled.div`
                 }
             }
         }
+
+        &.share {
+            display: flex;
+            justify-content: center;
+
+            a {
+                /* font-size: 16px; */
+                font-weight: bold;
+                background: #7e1bf0;
+                color: #fff;
+                border-radius: 10px;
+                padding: 10px 20px;
+                transition: all 0.2s;
+                
+                &:hover {
+                    background: #5f04c8;
+                }
+            }
+        }
     }
 `;

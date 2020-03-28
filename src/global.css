@@ -83,6 +83,18 @@ p {
         margin-top: 15px;
         width: 100%;
     }
+
+    .p-xs-0 {
+        padding: 0 !important;
+    }
+}
+
+.p-xs-0 {
+    padding: auto;
+}
+
+.p-0 {
+    padding: 0 !important;
 }
 
 .row {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Import Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,6 +16,13 @@ export default function Doacao() {
                     <div className="col-12 title">
                         <h1>Ajude no Combate ao Covid-19</h1>
                         <div className="divider"></div>
+                    </div>
+                    <div className="col-8 info" style={{ margin: '15px auto'}}>
+                        <p>Além de afetar diretamente a saúde das pessoas, o coronavírus vem afetando a vida econômica de milhares de famílias de baixa renda, uma vez que a maioria das atividades empresariais foram suspendidas. Segundo o Ministério da Economia, cerca de 50% dos empregos no Brasil, são informais e isso faz com que a fragilidade das pessoas com baixa renda seja ainda mais acentuada, ja que eles estão em maioria inseridos nessa porcentagem.</p>
+                        <p>Portanto, além de fornecer informações sobre o coronavírus, tambem queremos ajudar pessoas carentes que estão sofrendo com essa situação. Clique em Quero Ajudar e junte-se a esta iniciativa !</p>
+                    </div>
+                    <div className="col-8 info share" style={{ margin: '15px auto'}}>
+                        <Link to="/ajudar">Quero Ajudar !</Link>
                     </div>
                     {/* <div className="col-8 info" style={{ margin: '15px auto'}}>
                         <h1>Por Que?</h1>
