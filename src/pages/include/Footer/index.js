@@ -208,7 +208,7 @@ export default function Footer() {
                 </Row>
             </Section>
             <div className="col-12 copy" >
-                <p>Copyright © IncludeJr & Kadoo Tecnologia.</p>
+                <p>Copyright © IncludeJr</p>
             </div>
         </Row>
     );

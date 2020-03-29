@@ -46,7 +46,7 @@ const Routes = () => (
         <NavBar />
 
         {/* Routes */}
-        <Switch>
+        <Switch >
             <Route exact path="/" component={Index}  />
             <Route path="/ajudar" component={Ajuda}  />
         </Switch>

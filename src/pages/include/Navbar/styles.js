@@ -113,7 +113,7 @@ export const NavMenu = styled.div`
             /* letter-spacing: -1px; */
             font-size: 16px;
             font-weight: 700;
-            padding: 10px 20px;
+            padding: 10px 15px;
             color: white;
             transition: all 0.3s;
             /* text-transform: capitalize; */
@@ -138,6 +138,22 @@ export const NavMenu = styled.div`
 
             &:last-of-type {
                 padding-right: 0px !important; 
+            }
+
+            &.route {
+                a {
+                    font-weight: bold;
+                    background: #7e1bf0;
+                    color: #fff;
+                    border-radius: 10px;
+                    padding: 8px 16px;
+                    transition: all 0.2s;
+                    
+                    &:hover {
+                        background: #5f04c8;
+                    }
+                }
+                /* background:  */
             }
         }
 

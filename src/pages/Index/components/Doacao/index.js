@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 // Import Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarked, faDonate } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarked, faDonate, faHeart } from '@fortawesome/free-solid-svg-icons';
 // import { faBrade } from '@fortawesome/free-brands-svg-icons'
 
 import { Row, Section } from './styles';
@@ -22,7 +22,7 @@ export default function Doacao() {
                         <p>Portanto, além de fornecer informações sobre o coronavírus, tambem queremos ajudar pessoas carentes que estão sofrendo com essa situação. Clique em Quero Ajudar e junte-se a esta iniciativa !</p>
                     </div>
                     <div className="col-8 info share" style={{ margin: '15px auto'}}>
-                        <Link to="/ajudar">Quero Ajudar !</Link>
+                        <Link to="/ajudar"><FontAwesomeIcon icon={faHeart} /> Quero Ajudar !</Link>
                     </div>
                     {/* <div className="col-8 info" style={{ margin: '15px auto'}}>
                         <h1>Por Que?</h1>

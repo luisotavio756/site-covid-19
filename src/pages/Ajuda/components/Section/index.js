@@ -88,7 +88,7 @@ export default function Section() {
                             </Ul>
                         </div>
                     </div>
-                    <div className="col-12 content p-0">
+                    <div id="content" className="col-12 content p-0">
                         <Row>
                             { loading && <div className="loader-more"></div>}
                             { content == '' && '' }

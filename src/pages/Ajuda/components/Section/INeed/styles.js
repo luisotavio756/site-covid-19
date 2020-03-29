@@ -124,4 +124,23 @@ export const FormHelp = styled.form`
         }
     }
 
+    .alert { 
+        padding: 15px 10px;
+        /* border: 2px solid #7e1bf0; */
+        /* color: #7e1bf0; */
+        /* color: #fff; */
+        border-radius: 5px;
+        transition: all 0.2s linear;
+
+        &.alert-success {
+            color: #fff;
+            background: rgb(4, 211, 97);
+        }
+
+        &.alert-danger {
+            color: #fff;
+            background: darkred;
+        }
+    }
+
 `;

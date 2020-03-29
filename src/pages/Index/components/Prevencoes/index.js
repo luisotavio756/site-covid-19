@@ -1,14 +1,75 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Import Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookMedical, faHospital } from '@fortawesome/free-solid-svg-icons';
+import { faBookMedical, faHospital, faChartArea } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 import Img from '../../../../assets/img/covid-table.jpeg';
 import { Row, Section } from './styles';
+import api from '../../../../services/api';
 
 export default function Prevencoes() {
+    const ufs = [
+        {nome: "Acre", sigla: "AC"},
+        {nome: "Alagoas", sigla: "AL"},
+        {nome: "Amapá", sigla: "AP"},
+        {nome: "Amazonas", sigla: "AM"},
+        {nome: "Bahia", sigla: "BA"},
+        {nome: "Ceará", sigla: "CE"},
+        {nome: "Distrito Federal", sigla: "DF"},
+        {nome: "Espírito Santo", sigla: "ES"},
+        {nome: "Goiás", sigla: "GO"},
+        {nome: "Maranhão", sigla: "MA"},
+        {nome: "Mato Grosso", sigla: "MT"},
+        {nome: "Mato Grosso do Sul", sigla: "MS"},
+        {nome: "Minas Gerais", sigla: "MG"},
+        {nome: "Pará", sigla: "PA"},
+        {nome: "Paraíba", sigla: "PB"},
+        {nome: "Paraná", sigla: "PR"},
+        {nome: "Pernambuco", sigla: "PE"},
+        {nome: "Piauí", sigla: "PI"},
+        {nome: "Rio de Janeiro", sigla: "RJ"},
+        {nome: "Rio Grande do Norte", sigla: "RN"},
+        {nome: "Rio Grande do Sul", sigla: "RS"},
+        {nome: "Rondônia", sigla: "RO"},
+        {nome: "Roraima", sigla: "RR"},
+        {nome: "Santa Catarina", sigla: "SC"},
+        {nome: "São Paulo", sigla: "SP"},
+        {nome: "Sergipe", sigla: "SE"},
+        {nome: "Tocantins", sigla: "TO"}
+    ];
+    const [ ceCases, setCeCases ] = useState(0);
+    const [ brCases, setBrCases ] = useState(0);
+
+    useEffect(() => {
+        async function currentState() {
+            const  {data}   = await api.get(`/cases/ce`);
+            setCeCases(data[0]);
+    
+            const  data2   = await api.get(`/cases/br`);
+            setBrCases(data2.data[0]);
+
+            // alert(JSON.stringify(data));
+    
+        }
+
+        currentState()
+    });
+
+    
+    
+    function enviarMensagem(numero){
+		var celular = numero;
+
+        var texto = `*Vale contra o Coronavírus*\n\nCasos coronavírus no Ceará e Brasil 🇧🇷\n🕐 Atualizado 25/03/2020 - 10:41\n\n*Números Brasil*\n\n✅ ${brCases.confirmed} Confirmados\n💀 ${brCases.deaths} Mortes\n\n*Números Ceará*\n\n✅ ${ceCases.confirmed} Confirmados\n💀 ${ceCases.deaths} Mortes\n\n📊 Fonte: Ministério da Saúde e Secretarias de Saúde de todos os estados\nhttps://coronainfobr.herokuapp.com/\n⚠️ Evite fake news\n☢️ Sobre a doença\ncoronavirus.saude.gov.br/index.php/sobre-a-doenca`;
+
+		texto = window.encodeURIComponent(texto);
+
+		window.open("https://api.whatsapp.com/send?text=" + texto, "_blank");
+		//Obs.. use "_system", no lugar de blank, caso você esteja usando Phonegap / Cordova / Ionic ou qualquer um baseado em webview;
+	}
+
     return (
         <Row id="prevention">
             <Section className="col-12">
@@ -63,16 +124,17 @@ export default function Prevencoes() {
                         <h1>6. Links úteis</h1>
                         <p>
                             <a href="https://unidades.saude.ce.gov.br/" target="_blank"><FontAwesomeIcon icon={faHospital} /> Unidades de Saúde do Ceará</a><br />
-                            <a href="https://coronavirus.ceara.gov.br/boletins/" target="_blank"><FontAwesomeIcon icon={faBookMedical} /> Boletins da Secretaria de Saúde do Estado do Ceará</a>
+                            <a href="https://coronavirus.ceara.gov.br/boletins/" target="_blank"><FontAwesomeIcon icon={faBookMedical} /> Boletins da Secretaria de Saúde do Estado do Ceará</a><br/>
+                            <a href="https://covid.saude.gov.br/" target="_blank"><FontAwesomeIcon icon={faChartArea} /> Painel Coronavírus - Ministério da Saúde</a>
                         </p>
                     </div>
                     <div className="col-12 info">
                         <p style={{ fontSize: 14, textAlign: "end" }}>Fonte: Secretária de Saúde Ceará | Escola de Saúde Pública do Ceará</p>
                     </div>
-                    {/* <div className="col-12 share">
+                    <div className="col-12 share">
                         <p>Compartilhe essas informações com seus amigos</p>
-                        <a href=""><FontAwesomeIcon icon={faWhatsapp} size="2x"/></a>
-                    </div> */}
+                        <a href="#" onClick={enviarMensagem}><FontAwesomeIcon icon={faWhatsapp} size="2x"/></a>
+                    </div>
                 </Row>
             </Section>
         </Row>

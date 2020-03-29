@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Import Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,8 +7,22 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
 import { Row, FeedItem } from './styles';
+import api from '../../../../../services/api';
 
 export default function IKnow() {
+    const [ feed, setFeed ] = useState([]);
+
+    useEffect(() => {
+        async function loadFeed() {
+            const { data }  = await api.get('/needies');
+
+            // alert(JSON.stringify(data.needies));
+            setFeed(data.needies);
+        }
+
+        loadFeed();
+
+    }, []);
     return (
         <div className="col-6 p-0" style={{ margin: '0 auto'}}>
             <Row>
@@ -18,26 +32,28 @@ export default function IKnow() {
                 </div>
             </Row>
             <Row>
-                <FeedItem>
-                    <div className="info">
-                        <h4>Luis Otávio Lima Caminha</h4>
-                        <p>Russas, Av. Irmã Maria da Graça, Nº 344. Perto do liceu</p>
-                    </div>
-                    <div className="info">
-                        <p>sou viúva e tenho 4 filhos. não tenho condições de comprar o alimentos deles em meio essa crise. moro em russas, perto do liceu. se alguem puder me ajudar, eu nao vou ter palavras pra agradecer. que deus abençõe cada um de voces. espero que todos consigam. vocês podem ajudar com alimentos, roupas ou dinheiro. agradeço por tudo.</p>
-                    </div>
-                    <div className="info-group" style={{ }}>
-                        <div className="test">
-                            <h4>Telefone:</h4>
-                            <p>(88) 99723-4726</p>
+                { feed.map(item => (
+                    <FeedItem>
+                        <div className="info">
+                            <h4>{ item.needy_name}</h4>
+                            <p>{ item.city }, { item.address }, Nº { item.number }. { item.reference_point }</p>
                         </div>
-                        <p>há 4 horas</p>
-                    </div>
-                    <div className="info subscribe">
-                        {/* <h4>Luis Otávio Lima Caminha</h4> */}
-                        <p>cadastrado por <span>Roberto de Lima Ferreira</span></p>
-                    </div>
-                </FeedItem>
+                        <div className="info">
+                            <p>{ item.description }</p>
+                        </div>
+                        <div className="info-group" style={{ }}>
+                            <div className="test">
+                                <h4>Telefone:</h4>
+                                <p>{ item.needy_phone}</p>
+                            </div>
+                            <p>há 4 horas</p>
+                        </div>
+                        <div className="info subscribe">
+                            {item.name && item.phone && <p>cadastrado por <span>{ item.name }</span></p>}
+                            
+                        </div>
+                    </FeedItem>
+                ))}
                 <div className="col-12 p-0 pagination" style={{ display: 'flex', alignItems: 'center', justifyContent: "space-between"}}>
                     <a href="#"><FontAwesomeIcon icon={faAngleDoubleLeft} /> Anterior</a>
                     <a href="#">Proxima <FontAwesomeIcon icon={faAngleDoubleRight} /> </a>
