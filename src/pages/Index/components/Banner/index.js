@@ -34,7 +34,7 @@ export default function Banner() {
         <BannerImg>
             <div className="text" id="text">
                 <h1>
-                    #RussasContraOCoronavirus
+                    Russas Contra O Coronavirus
                 </h1>
             </div>
             <p className="brasil">
