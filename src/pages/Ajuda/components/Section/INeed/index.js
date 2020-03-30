@@ -69,7 +69,7 @@ export default function Feed() {
                 </div>
             </Row>
             <FormHelp onSubmit={handleSubmit}>
-                { status == 1 && <div className="alert alert-success"><h4>Você foi cadastrado com sucesso em nosso banco de ajuda. Entraremos em contato logo logo. Obrigado <FontAwesomeIcon icon={faHeart} /></h4></div> }
+                { status == 1 && <div className="alert alert-success"><h4>Você foi cadastrado com sucesso em nosso feed de ajuda. Você pode ver clicando em "Feed de Ajuda". Obrigado <FontAwesomeIcon icon={faHeart} /></h4></div> }
                 { status == 2 && <div className="alert alert-danger"><h4>Não foi possível concluir o cadastro, verifique os campos ou tente novamente mais tarde <FontAwesomeIcon icon={faTimes} /></h4></div> }
                 <div className="section-form">
                     <h2>Seus Dados</h2>
@@ -108,7 +108,7 @@ export default function Feed() {
                 <div className="col-12 share">
                     <p style={{ textAlign: 'center', fontSize: 14, color: '#666' }}>Ou</p>
                     <p style={{ textAlign: 'center', fontSize: 14, color: '#666' }}>Entre em contato diretamento com nossos representantes no Whatsapp</p>
-                    <a href="" >
+                    <a href="https://api.whatsapp.com/send?phone=+5585992817986&text=Olá, eu preciso de ajuda !" target="_blank">
                         <FontAwesomeIcon icon={faWhatsapp} />
                     </a>
                 </div>

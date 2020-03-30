@@ -48,7 +48,10 @@ export const Row = styled.div`
     .pagination {
         margin-top: 15px;
 
-        a {
+        button {
+            cursor: pointer;
+            font-family: 'Nunito';
+            border: none;
             font-weight: bold;
             background: #7e1bf0;
             color: #fff;
@@ -58,6 +61,10 @@ export const Row = styled.div`
             
             &:hover {
                 background: #5f04c8;
+            }
+
+            &:disabled {
+                opacity: 0.6;
             }
         }
     }

@@ -186,7 +186,7 @@ export default function Footer() {
                         <h3><FontAwesomeIcon icon={faUsers}/> Contribuidores</h3>
                     </div>
                     { array.map(item => (
-                        <div className="col-3" style={{ marginTop: 10 }}>
+                        <div key={item.name} className="col-3" style={{ marginTop: 10 }}>
                             <Card>
                                 <div className="img">
                                     <img src={ item.img } alt=""/>

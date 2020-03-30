@@ -15,18 +15,18 @@ export default function Banner() {
 
     useEffect(() => {
         // alert('kkkkk')
-        async function load() {
-            let { data }  = await api.get('/cases/br');
-            data = data[0];
+        // async function load() {
+        //     let { data }  = await api.get('/cases/br');
+        //     data = data[0];
 
-            setConfirmed(data.confirmed);
-            setDealths(data.deaths);
-            setLoading(false);
-            // alert(JSON.stringify(data[0]))
-        }
+        //     setConfirmed(data.confirmed);
+        //     setDealths(data.deaths);
+        //     setLoading(false);
+        //     // alert(JSON.stringify(data[0]))
+        // }
 
-        setLoading(true);
-        load();
+        // setLoading(true);
+        // load();
         
 
     }, []);
@@ -34,7 +34,7 @@ export default function Banner() {
         <BannerImg>
             <div className="text" id="text">
                 <h1>
-                    Ajude-nos nesta iniciativa
+                    Não é preciso toque para estar junto
                 </h1>
             </div>
             <p className="brasil">
@@ -51,10 +51,10 @@ export default function Banner() {
                         </div>
                     </div>
                     <div className="dealths">
-                        <FontAwesomeIcon icon={faHandHoldingUsd} /> 
+                        <FontAwesomeIcon icon={faUsers} /> 
                         <div className="text">
-                            <h1>{ deaths },00</h1>
-                            <p>doados</p>
+                            <h1>{ deaths }</h1>
+                            <p>famílias ajudadas</p>
                         </div>
                     </div>
                     {/* <div className="dealths">

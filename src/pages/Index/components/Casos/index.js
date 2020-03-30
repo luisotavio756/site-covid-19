@@ -43,6 +43,7 @@ export default function Casos() {
     const [ allStates, setAllStates ] = useState([]);
     const [ nameState, setName ] = useState('');
     const [ uF, setUf ] = useState(ufs);
+    const [ lastUpdate, setLast ] = useState('');
 
 
     useEffect(() => {
@@ -69,7 +70,8 @@ export default function Casos() {
         
         async function load() {
             const { data } = await api.get('/cases');
-            setAllStates(data);
+            setAllStates(data[0].cases);
+            setLast(data[0].last_updated);
         }
 
         async function currentState(uf = 'ce') {
@@ -153,6 +155,7 @@ export default function Casos() {
                 </Row>
                 <Row id="fontes">
                     <div className="col-12">
+                        <h4 style={{ textAlign: 'center'}}>Ultima atualização em { lastUpdate }</h4>
                         <p><span>*Atenção*:</span> Os números podem ter diferença em relação aos números do Ministério da Saúde pela indisponibilidade da plataforma online, fazendo com que os dados das secretarias de cada estado sejam mais próximos da realidade.</p>
                         <p className="fontes"><span>Fontes:</span> Dados consultados pela plataforma de monitoramento <a href="https://labs.wesleycota.com/sarscov2/br/" target="_blank">https://labs.wesleycota.com/sarscov2/br/</a> e analisados por nossos pesquisadores pelas secretárias de saúde do Acre, Alagoas, Amapá, Amazonas, Bahia, Ceará, Distrito Federal, Espírito Santo, Goiás, Maranhão, Mato Grosso, Mato Grosso do Sul, Minas Gerais, Pará, Paraíba, Paraná, Pernambuco, Piauí, Rio de Janeiro, Rio Grande do Norte, Rio Grande do Sul, Rondônia, Roraima, Santa Catarina, São Paulo, Sergipe e Tocantins. </p>
                     </div>

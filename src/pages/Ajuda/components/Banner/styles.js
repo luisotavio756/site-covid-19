@@ -5,7 +5,7 @@ export const BannerImg = styled.div`
     width: 100%;
     height: 400px;
     
-    background-image: linear-gradient(#fff, #222), url(${Img});
+    background-image: linear-gradient(#7d40e7, #222), url(${Img});
     
 
 	background-blend-mode: multiply;

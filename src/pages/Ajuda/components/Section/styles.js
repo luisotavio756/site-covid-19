@@ -14,8 +14,8 @@ export const Row = styled.div`
         }
     }   
 
-    /* background: #f0f0f5; */
-    background: #E5E6F0;
+    background: #f0f0f5;
+    /* background: #E5E6F0; */
 `;
 
 export const SectionContainer = styled.div`
