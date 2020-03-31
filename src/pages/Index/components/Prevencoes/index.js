@@ -67,7 +67,7 @@ export default function Prevencoes() {
     function enviarMensagem(numero){
 		var celular = numero;
 
-        var texto = `*Vale contra o Coronavírus*\n\n💌 Ajude contra famílias carentes que estão passando necessidade devido a crise do Coronavírus\n\n📲 Entre em: https://coronainfobr.herokuapp.com/ajudar e faça sua doação ou cadastre alguem que precisa. Estamos juntos nessa.\n\nCasos coronavírus no Ceará e Brasil 🇧🇷\n🕐 Atualizado em ${lastUpdated}\n\n*Números Brasil*\n\n✅ ${brCases.confirmed} Confirmados\n💀 ${brCases.deaths} Mortes\n\n*Números Ceará*\n\n✅ ${ceCases.confirmed} Confirmados\n💀 ${ceCases.deaths} Mortes\n\n📊 Fonte: Ministério da Saúde e Secretarias de Saúde de todos os estados\nhttps://coronainfobr.herokuapp.com/\n⚠️ Evite fake news\n☢️ Sobre a doença\ncoronavirus.saude.gov.br/index.php/sobre-a-doenca`;
+        var texto = `*Vale contra o Coronavírus*\n\n💌 Ajude famílias carentes que estão passando necessidade devido a crise do Coronavírus\n\n📲 Entre em: https://coronainfobr.herokuapp.com/ajudar e faça sua doação ou cadastre alguem que precisa. Estamos juntos nessa.\n\nCasos coronavírus no Ceará e Brasil 🇧🇷\n🕐 Atualizado em ${lastUpdated}\n\n*Números Brasil*\n\n✅ ${brCases.confirmed} Confirmados\n💀 ${brCases.deaths} Mortes\n\n*Números Ceará*\n\n✅ ${ceCases.confirmed} Confirmados\n💀 ${ceCases.deaths} Mortes\n\n📊 Fonte: Ministério da Saúde e Secretarias de Saúde de todos os estados\nhttps://coronainfobr.herokuapp.com/\n⚠️ Evite fake news\n☢️ Sobre a doença\ncoronavirus.saude.gov.br/index.php/sobre-a-doenca`;
 
 		texto = window.encodeURIComponent(texto);
 

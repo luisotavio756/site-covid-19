@@ -77,7 +77,7 @@ export default function Section() {
     function enviarMensagem(numero){
 		var celular = numero;
 
-        var texto = `*Vale contra o Coronavírus*\n\n💌 Ajude contra famílias carentes que estão passando necessidade devido a crise do Coronavírus\n\n📲 Entre em: https://coronainfobr.herokuapp.com/ajudar e faça sua doação ou cadastre alguem que precisa. Estamos juntos nessa.\n\n⚠️ Evite fake news\n☢️ Sobre a doença\ncoronavirus.saude.gov.br/index.php/sobre-a-doenca`;
+        var texto = `*Vale contra o Coronavírus*\n\n💌 Ajude famílias carentes que estão passando necessidade devido a crise do Coronavírus\n\n📲 Entre em: https://coronainfobr.herokuapp.com/ajudar e faça sua doação ou cadastre alguem que precisa. Estamos juntos nessa.\n\n⚠️ Evite fake news\n☢️ Sobre a doença\ncoronavirus.saude.gov.br/index.php/sobre-a-doenca`;
 
 		texto = window.encodeURIComponent(texto);
 
