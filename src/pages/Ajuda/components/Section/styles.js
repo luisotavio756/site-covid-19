@@ -21,7 +21,7 @@ export const Row = styled.div`
 export const SectionContainer = styled.div`
     margin: 0 auto;
     width: 1300px;
-    padding: 3rem 4vw !important;
+    padding: 2rem 4vw !important;
     
 
     .share{ 
@@ -40,6 +40,21 @@ export const SectionContainer = styled.div`
             /* border: 1px solid green; */
             border-radius: 5px;
             color: white;
+        }
+    }
+
+    .share-wpp {
+        margin-bottom: 2rem;
+
+        h4 {
+            text-align: center;
+            a {
+                color: #7d40e7;
+                transition: all 0.2s;
+                text-decoration: underline;
+
+                font-size: 18px;
+            }
         }
     }
 

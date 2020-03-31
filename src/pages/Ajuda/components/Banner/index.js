@@ -54,7 +54,7 @@ export default function Banner() {
                         <FontAwesomeIcon icon={faUsers} /> 
                         <div className="text">
                             <h1>{ deaths }</h1>
-                            <p>famílias ajudadas</p>
+                            <p>famílias</p>
                         </div>
                     </div>
                     {/* <div className="dealths">

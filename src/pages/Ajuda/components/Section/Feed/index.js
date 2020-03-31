@@ -24,7 +24,8 @@ export default function IKnow() {
         setTotal(data.total);
         setLoading(false);
         setPage(page);
-        window.location.href = '#feed';
+        if(page != 1)
+            window.location.href = '#feed';
     }
 
     useEffect(() => {

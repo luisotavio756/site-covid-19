@@ -41,6 +41,7 @@ export default function Prevencoes() {
     ];
     const [ ceCases, setCeCases ] = useState(0);
     const [ brCases, setBrCases ] = useState(0);
+    const [ lastUpdated, setLast ] = useState('');
 
     useEffect(() => {
         async function currentState() {
@@ -50,7 +51,11 @@ export default function Prevencoes() {
             const  data2   = await api.get(`/cases/br`);
             setBrCases(data2.data[0]);
 
-            // alert(JSON.stringify(data));
+            const last_updated  = await api.get('/cases');
+            setLast(last_updated.data[0].last_updated);
+
+
+            // alert(JSON.stringify());
     
         }
 
@@ -62,7 +67,7 @@ export default function Prevencoes() {
     function enviarMensagem(numero){
 		var celular = numero;
 
-        var texto = `*Vale contra o Coronavírus*\n\nCasos coronavírus no Ceará e Brasil 🇧🇷\n🕐 Atualizado 25/03/2020 - 10:41\n\n*Números Brasil*\n\n✅ ${brCases.confirmed} Confirmados\n💀 ${brCases.deaths} Mortes\n\n*Números Ceará*\n\n✅ ${ceCases.confirmed} Confirmados\n💀 ${ceCases.deaths} Mortes\n\n📊 Fonte: Ministério da Saúde e Secretarias de Saúde de todos os estados\nhttps://coronainfobr.herokuapp.com/\n⚠️ Evite fake news\n☢️ Sobre a doença\ncoronavirus.saude.gov.br/index.php/sobre-a-doenca`;
+        var texto = `*Vale contra o Coronavírus*\n\n💌 Ajude contra famílias carentes que estão passando necessidade devido a crise do Coronavírus\n\n📲 Entre em: https://coronainfobr.herokuapp.com/ajudar e faça sua doação ou cadastre alguem que precisa. Estamos juntos nessa.\n\nCasos coronavírus no Ceará e Brasil 🇧🇷\n🕐 Atualizado em ${lastUpdated}\n\n*Números Brasil*\n\n✅ ${brCases.confirmed} Confirmados\n💀 ${brCases.deaths} Mortes\n\n*Números Ceará*\n\n✅ ${ceCases.confirmed} Confirmados\n💀 ${ceCases.deaths} Mortes\n\n📊 Fonte: Ministério da Saúde e Secretarias de Saúde de todos os estados\nhttps://coronainfobr.herokuapp.com/\n⚠️ Evite fake news\n☢️ Sobre a doença\ncoronavirus.saude.gov.br/index.php/sobre-a-doenca`;
 
 		texto = window.encodeURIComponent(texto);
 

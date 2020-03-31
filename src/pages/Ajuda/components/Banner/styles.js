@@ -27,7 +27,7 @@ export const BannerImg = styled.div`
 
     .brasil {
         font-weight: 300;
-        margin-top: 30px;
+        /* margin-top: 30px; */
         text-align: center;
         letter-spacing: 1px;
         color: #CED2D9 !important;

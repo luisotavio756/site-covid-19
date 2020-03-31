@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Row, SectionContainer, Ul } from './styles';
 
 // Import Icons
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faHeart, faLock } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
@@ -74,10 +74,24 @@ export default function Section() {
         // alert()
     }
 
+    function enviarMensagem(numero){
+		var celular = numero;
+
+        var texto = `*Vale contra o Coronavírus*\n\n💌 Ajude contra famílias carentes que estão passando necessidade devido a crise do Coronavírus\n\n📲 Entre em: https://coronainfobr.herokuapp.com/ajudar e faça sua doação ou cadastre alguem que precisa. Estamos juntos nessa.\n\n⚠️ Evite fake news\n☢️ Sobre a doença\ncoronavirus.saude.gov.br/index.php/sobre-a-doenca`;
+
+		texto = window.encodeURIComponent(texto);
+
+		window.open("https://api.whatsapp.com/send?text=" + texto, "_blank");
+		//Obs.. use "_system", no lugar de blank, caso você esteja usando Phonegap / Cordova / Ionic ou qualquer um baseado em webview;
+	}
+
     return (
         <Row>
             <SectionContainer className="col-12">
                 <Row>
+                    <div className="col-12 share-wpp">
+                        <h4>Não pode ajudar ?<br/><a href="#" onClick={enviarMensagem}><FontAwesomeIcon icon={faWhatsapp} /> Compartilhe no WhatsApp com seus amigos</a></h4>
+                    </div>
                     <div className="col-12 p-0">
                         <h2 id="title-menu" style={{ textAlign: "center", marginBottom: 5 }}>Menu</h2>
                         <div className="nav" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
