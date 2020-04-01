@@ -62,7 +62,7 @@ export default function Form() {
             <Row style={{ marginTop: 10 }} >
                 <div className="col-12 share">
                     <p style={{ textAlign: 'center', fontSize: 14, color: '#666' }}>Ou</p>
-                    <p style={{ textAlign: 'center', fontSize: 14, color: '#666' }}>Entre em contato diretamento com nossos representantes no Whatsapp</p>
+                    <p style={{ textAlign: 'center', fontSize: 14, color: '#666' }}>Entre em contato diretamente com nossos representantes no Whatsapp</p>
                     <a href="https://api.whatsapp.com/send?phone=+5585992817986&text=Olá, eu quero ajudar !" target="_blank">
                         <FontAwesomeIcon icon={faWhatsapp} />
                     </a>
