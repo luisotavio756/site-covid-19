@@ -6,6 +6,7 @@ import { faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import Flaviano from '../../../../assets/img/flaviano.jpeg';
 
 import RGym from '../../../../assets/img/rgym.jpeg';
+import DonaF from '../../../../assets/img/donaform.jpeg';
 import { Row, Card, Section, Menu } from './styles';
 
 
@@ -14,7 +15,7 @@ const array = [
         name: 'RGym',
         img: RGym,
         position: 'Academia',
-        frase: 'Frase',
+        frase: 'Fornecendo descontos nas mensalidades para quem doar alimentos para pessoas necessitadas',
         links: [
             {
                 link: 'https://api.whatsapp.com/send?phone=+5588999901647',
@@ -26,7 +27,18 @@ const array = [
             },
         ]
     },
-    
+    {
+        name: 'Dona Formiga',
+        img: DonaF,
+        position: 'Ateliê Gourmet',
+        frase: 'Recebendo alimentos em troca de dinheiro em suas entregas de Delivery para ajudar pessoas necessitadas, além de fazer uma doação para nosso projeto',
+        links: [
+            {
+                link: 'https://instagram.com/donna_formigars?igshid=6u726lc92sjk',
+                icon: faInstagram
+            },
+        ]
+    },
 ];
 
 export default function Footer() {
@@ -59,7 +71,7 @@ export default function Footer() {
                                 <div className="desc">
                                     <h2>{ item.name }</h2>
                                     <p>{ item.position }</p>
-                                    <p className="frase">"{ item.frase }"</p>
+                                    <p className="frase">{ item.frase }</p>
                                 </div>
                                 <div className="social">
                                     { item.links.map(itemLink => (

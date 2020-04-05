@@ -51,11 +51,17 @@ export default function Navbar() {
                                 </>
                             }
                             { his == '/ajudar' && 
+                                <>
+                                <li><Link to="/parceiros" onClick={(e) =>  SetNav(false) }>Conhecer Parceiros</Link></li>
                                 <li><Link to="/" onClick={(e) => SetNav(false) }>Voltar para Início</Link></li> 
+                                </>
                             }
                             {
                                 his == '/parceiros' && 
+                                    <>
+                                    <li className="route"><Link to="/ajudar" onClick={(e) =>  SetNav(false) }><FontAwesomeIcon icon={faHeart} /> Quero ajudar</Link></li>
                                     <li><Link to="/" onClick={(e) => SetNav(false) }>Voltar para Início</Link></li>
+                                    </>
                             }
                         </ul>
                         <button onClick={(e) => SetNav(false)} type="button">&times;</button>
