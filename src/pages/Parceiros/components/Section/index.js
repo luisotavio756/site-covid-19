@@ -44,7 +44,7 @@ const array = [
         name: 'Maria Emanuele',
         img: Manu,
         position: 'Salão de Beleza',
-        frase: 'Recebendo alimentos no lugar de dinheiro em seus serviços de beleza durante esse período para submeter para pessoas carentes.',
+        frase: 'Recebendo alimentos no lugar de dinheiro em seus serviços de beleza durante esse período para submeter à pessoas carentes.',
         links: [
             {
                 link: 'https://www.instagram.com/mannuhair/',
