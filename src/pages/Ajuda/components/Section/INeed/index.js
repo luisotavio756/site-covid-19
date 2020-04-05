@@ -30,12 +30,12 @@ export default function Feed() {
             const response = await api.post('/needies', {
                 name,
                 phone,
-                needy_name,
-                needy_phone,
+                needyName: needy_name,
+                needyPhone: needy_phone,
                 city,
                 address,
                 number,
-                reference_point,
+                referencePoint: reference_point,
                 description
             });
 
@@ -79,7 +79,7 @@ export default function Feed() {
                     </div>
                     <div className="input-block">
                         <label htmlFor="">Telefone</label>
-                        <input type="tel" placeholder="Digite seu Telefone..." onChange={(e) => setPhoneNeedy(e.target.value)} value={needy_phone} required/>
+                        <input type="tel" maxLength="15" placeholder="Digite seu Telefone..." onChange={(e) => setPhoneNeedy(e.target.value)} value={needy_phone} required/>
                     </div>
                     <div className="input-block">
                         <label htmlFor="">Cidade</label>

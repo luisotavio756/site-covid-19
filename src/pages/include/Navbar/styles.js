@@ -26,7 +26,7 @@ export const NavContent = styled.div`
     display: flex;
     margin: 0 auto;
     max-width: 1300px;
-    padding:  1rem 4vw;
+    padding: 1rem 4vw;
 
     align-items: center;
     justify-content: space-between;
@@ -38,25 +38,17 @@ export const NavContent = styled.div`
     color: white;
 
     .brand {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
 
         .logo {
-            a {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                
-                font-size: 20px;
-            }
 
-            padding-right: 15px;
+
+            /* padding-right: 15px; */
             /* border-right: 1px solid #999; */
 
             img{
-                filter: invert(1);
-                width: 50px;
+                /* filter: invert(1); */
+                width: 160px;
                 height: auto;
             }
         }

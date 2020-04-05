@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUsers } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -162,8 +162,10 @@ const array = [
 ];
 
 export default function Footer() {
+    var his = useLocation().pathname;
+
     return (
-        <Row id="footer">
+        <Row id="footer" style={{ display: his == '/parceiros' ? 'none' : ''}}>
             <Section type="0">
                 <Row>
                     <div className="col-12 logo-text">

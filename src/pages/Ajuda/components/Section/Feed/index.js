@@ -17,8 +17,6 @@ export default function IKnow() {
     
     async function loadFeed(page = 1) {
         const { data }  = await api.get(`/needies?page=${page}`);
-
-        // alert(JSON.stringify(data.needies));
         
         setFeed(data.needies);
         setTotal(data.total);
@@ -66,20 +64,27 @@ export default function IKnow() {
                     </FeedItem>
                 }
                 { feed.map(item => (
-                    <FeedItem key={item.needy_name}>
+                    <FeedItem key={item.needyName}>
                         <div className="info">
-                            <h4>{ item.needy_name}</h4>
-                            <p>{ item.city }, { item.address }, Nº { item.number }. { item.reference_point }</p>
+                            <h4>{ item.needyName}</h4>
+                            <p>{ item.city }, { item.address }, Nº { item.number }. { item.referencePoint }</p>
                         </div>
                         <div className="info">
                             <p>{ item.description }</p>
                         </div>
                         <div className="info-group">
-                            <div className="test">
-                                <h4>Telefone:</h4>
-                                <p>{ item.needy_phone}</p>
-                            </div>
-                            <p>há 4 horas</p>
+                            { item.phone && 
+                                <div className="test">
+                                    <h4>Telefone do Ajudante:</h4>
+                                    <p>{ item.phone }</p>
+                                </div>
+                            }
+                            { item.needyPhone && 
+                                <div className="test">
+                                    <h4>Telefone do Necessitado:</h4>
+                                    <p>{ item.needyPhone }</p>
+                                </div>
+                            }
                         </div>
                         <div className="info subscribe">
                             {item.name && item.phone && <p>cadastrado por <span>{ item.name }</span></p>}
@@ -91,7 +96,7 @@ export default function IKnow() {
                     total > 8 &&
                     <div className="col-12 p-0 pagination" style={{ display: 'flex', alignItems: 'center', justifyContent: "space-between"}}>
                         <button disabled={pageNow === 1} onClick={prevPage}><FontAwesomeIcon icon={faAngleDoubleLeft} /> Anterior</button>
-                        <button disabled={pageNow === total / 8} onClick={nextPage}>Proxima <FontAwesomeIcon icon={faAngleDoubleRight} /> </button>
+                        <button disabled={pageNow > total / 8} onClick={nextPage}>Proxima <FontAwesomeIcon icon={faAngleDoubleRight} /> </button>
                     </div>
                 }
             </Row>

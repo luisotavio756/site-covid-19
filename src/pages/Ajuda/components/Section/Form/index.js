@@ -50,7 +50,7 @@ export default function Form() {
                 </div>
                 <div className="input-block">
                     <label htmlFor="">Seu Número</label>
-                    <input type="tel" placeholder="Digite seu Telefone..." onChange={(e) => setPhone(e.target.value)} value={phone} required/>
+                    <input type="tel" maxLength="15" placeholder="Digite seu Telefone com DDD..." onChange={(e) => setPhone(e.target.value)} value={phone} required/>
                 </div>
                 <div className="input-block">
                     <label htmlFor="">Seu Email(Opcional)</label>

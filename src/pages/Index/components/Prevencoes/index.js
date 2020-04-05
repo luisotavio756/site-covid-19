@@ -45,17 +45,14 @@ export default function Prevencoes() {
 
     useEffect(() => {
         async function currentState() {
-            const  {data}   = await api.get(`/cases/ce`);
+            const  { data }   = await api.get(`/cases/ce`);
             setCeCases(data[0]);
     
-            const  data2   = await api.get(`/cases/br`);
+            const data2 = await api.get(`/cases/br`);
             setBrCases(data2.data[0]);
 
-            const last_updated  = await api.get('/cases');
-            setLast(last_updated.data[0].last_updated);
-
-
-            // alert(JSON.stringify());
+            const last_updated = await api.get('/cases');
+            setLast(last_updated.data.last_updated);
     
         }
 

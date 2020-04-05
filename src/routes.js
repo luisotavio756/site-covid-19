@@ -28,6 +28,11 @@ const Ajuda = Loadable({
     loading: Loading
 });
 
+const Parceiros = Loadable({
+    loader: () => import('./pages/Parceiros'),
+    loading: Loading
+});
+
 
 const PrivateRoute = ({ component: Component, ...rest}) => (
     <Route {...rest} render={props => (
@@ -49,6 +54,7 @@ const Routes = () => (
         <Switch >
             <Route exact path="/" component={Index}  />
             <Route path="/ajudar" component={Ajuda}  />
+            <Route path="/parceiros" component={Parceiros} />
         </Switch>
         {/* Routes */}
         

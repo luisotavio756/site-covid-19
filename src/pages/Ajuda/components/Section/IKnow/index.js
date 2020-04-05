@@ -30,12 +30,12 @@ export default function IKnow() {
             const response = await api.post('/needies', {
                 name,
                 phone,
-                needy_name,
-                needy_phone,
+                needyName: needy_name,
+                needyPhone: needy_phone,
                 city,
                 address,
                 number,
-                reference_point,
+                referencePoint: reference_point,
                 description
             });
 
@@ -79,7 +79,7 @@ export default function IKnow() {
                     </div>
                     <div className="input-block">
                         <label htmlFor="">Telefone</label>
-                        <input type="tel" placeholder="Digite seu Telefone..." onChange={(e) => setPhone(e.target.value)} value={phone} required />
+                        <input type="tel" maxLength="15" placeholder="Digite seu Telefone..." onChange={(e) => setPhone(e.target.value)} value={phone} required />
                     </div>
                 </div>
                 <div className="section-form">
@@ -90,7 +90,7 @@ export default function IKnow() {
                     </div>
                     <div className="input-block">
                         <label htmlFor="">Telefone(Opcional)</label>
-                        <input type="tel" placeholder="Digite o Telefone da Pessoa Necessitada..." onChange={(e) => setPhoneNeedy(e.target.value)} value={needy_phone} />
+                        <input type="tel" maxLength="15" placeholder="Digite o Telefone da Pessoa Necessitada..." onChange={(e) => setPhoneNeedy(e.target.value)} value={needy_phone} />
                     </div>
                     <div className="input-block">
                         <label htmlFor="">Cidade</label>

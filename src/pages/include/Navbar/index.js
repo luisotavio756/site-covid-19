@@ -9,7 +9,7 @@ import { faBars, faHeart } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 // Import Logo
-import Logo from '../../../assets/img/corona-logo.svg';
+import Logo from '../../../assets/img/coronainfo.png';
 
 // Import Styleds;
 import { NavBar, NavContent, NavMenu, Social } from './styles';
@@ -33,7 +33,7 @@ export default function Navbar() {
             <NavContent>
                 <div className="brand">
                     <div className="logo">
-                        <Link to="/"><img src={Logo} alt=""/> Corona Info</Link>
+                        <Link to="/"><img src={Logo} alt=""/></Link>
                     </div>
                 </div>
                 <div className="menu-expand" onClick={(e) => SetNav(true)}>
@@ -46,12 +46,16 @@ export default function Navbar() {
                                 <>
                                     <li><a href="#cases" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Casos</a></li>
                                     <li><a href="#prevention" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Sobre o Covid-19</a></li>
-                                    <li><a href="#help" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Ajude no Combate</a></li>
+                                    <li><Link to="/parceiros" onClick={(e) =>  SetNav(false) }>Nossos Parceiros</Link></li>
                                     <li className="route"><Link to="/ajudar" onClick={(e) =>  SetNav(false) }><FontAwesomeIcon icon={faHeart} /> Quero ajudar</Link></li>
                                 </>
                             }
                             { his == '/ajudar' && 
                                 <li><Link to="/" onClick={(e) => SetNav(false) }>Voltar para Início</Link></li> 
+                            }
+                            {
+                                his == '/parceiros' && 
+                                    <li><Link to="/" onClick={(e) => SetNav(false) }>Voltar para Início</Link></li>
                             }
                         </ul>
                         <button onClick={(e) => SetNav(false)} type="button">&times;</button>

@@ -69,9 +69,9 @@ export default function Casos() {
 
         
         async function load() {
-            const { data } = await api.get('/cases');
-            setAllStates(data[0].cases);
-            setLast(data[0].last_updated);
+            const {data}  = await api.get('/cases');
+            setAllStates(data.cases);
+            setLast(data.last_updated);
         }
 
         async function currentState(uf = 'ce') {
@@ -80,7 +80,7 @@ export default function Casos() {
             // setCurrentState(data);
             // setLoadingState(false);
 
-            const { data }  = await api.get(`/cases/${uf}`);
+            const { data } = await api.get(`/cases/${uf}`);
 
             const name = uF.filter(item => item.sigla === uf.toUpperCase());
             // alert(name)

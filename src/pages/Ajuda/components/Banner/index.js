@@ -38,12 +38,12 @@ export default function Banner() {
                 </h1>
             </div>
             <p className="brasil">
-                Números de arrecadação até o momento
+                {/* Números de arrecadação até o momento */}
             </p>
             { loading && <div className="loader-more" style={{ marginTop: 5}}></div>}
             { !loading && 
                 <div className="cases">
-                    <div className="confirmed">
+                    {/* <div className="confirmed">
                         <FontAwesomeIcon icon={faUtensils} /> 
                         <div className="text"> 
                             <h1>{ confirmed }</h1>
@@ -56,7 +56,7 @@ export default function Banner() {
                             <h1>{ deaths }</h1>
                             <p>famílias</p>
                         </div>
-                    </div>
+                    </div> */}
                     {/* <div className="dealths">
                         <FontAwesomeIcon icon={faUsers} /> 
                         <div className="text">
