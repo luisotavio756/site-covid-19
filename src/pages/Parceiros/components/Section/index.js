@@ -7,6 +7,7 @@ import Flaviano from '../../../../assets/img/flaviano.jpeg';
 
 import RGym from '../../../../assets/img/rgym.jpeg';
 import DonaF from '../../../../assets/img/donaform.jpeg';
+import Manu from '../../../../assets/img/manuhair.jpeg';
 import { Row, Card, Section, Menu } from './styles';
 
 
@@ -31,10 +32,22 @@ const array = [
         name: 'Dona Formiga',
         img: DonaF,
         position: 'Ateliê Gourmet',
-        frase: 'Recebendo alimentos em troca de dinheiro em suas entregas de Delivery para ajudar pessoas necessitadas, além de fazer uma doação para nosso projeto',
+        frase: 'Recebendo alimentos no lugar do dinheiro em suas entregas de Delivery para ajudar pessoas necessitadas, além de fazer uma doação para nosso projeto',
         links: [
             {
                 link: 'https://instagram.com/donna_formigars?igshid=6u726lc92sjk',
+                icon: faInstagram
+            },
+        ]
+    },
+    {
+        name: 'Maria Manuele',
+        img: Manu,
+        position: 'Salão de Beleza',
+        frase: 'Recebendo alimentos em troca de dinheiro em seus serviços de beleza durante esse período para submeter para pessoas carentes.',
+        links: [
+            {
+                link: 'https://www.instagram.com/mannuhair/',
                 icon: faInstagram
             },
         ]
