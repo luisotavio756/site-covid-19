@@ -41,7 +41,7 @@ const array = [
         ]
     },
     {
-        name: 'Maria Manuele',
+        name: 'Maria Emanuele',
         img: Manu,
         position: 'Salão de Beleza',
         frase: 'Recebendo alimentos em troca de dinheiro em seus serviços de beleza durante esse período para submeter para pessoas carentes.',
