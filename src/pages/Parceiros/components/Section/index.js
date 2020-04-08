@@ -8,6 +8,7 @@ import Flaviano from '../../../../assets/img/flaviano.jpeg';
 import RGym from '../../../../assets/img/rgym.jpeg';
 import DonaF from '../../../../assets/img/donaform.jpeg';
 import Manu from '../../../../assets/img/manuhair.jpeg';
+import Yeloo from '../../../../assets/img/yeloo.jpeg';
 import { Row, Card, Section, Menu } from './styles';
 
 
@@ -48,6 +49,18 @@ const array = [
         links: [
             {
                 link: 'https://www.instagram.com/mannuhair/',
+                icon: faInstagram
+            },
+        ]
+    },
+    {
+        name: 'Yeloo',
+        img: Yeloo,
+        position: 'Mídias Sociais',
+        frase: 'Arrecadando alimentos para doação, e criando gratuitamente as artes para o projeto',
+        links: [
+            {
+                link: 'https://www.instagram.com/yeloo/',
                 icon: faInstagram
             },
         ]
@@ -99,7 +112,7 @@ export default function Footer() {
                 </Row>
             </Section>
             <div className="col-12 copy" >
-                <p>Copyright © IncludeJr</p>
+                <p>Copyright © CoronaInfo</p>
             </div>
         </Row>
     );

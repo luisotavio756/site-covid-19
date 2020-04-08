@@ -210,7 +210,7 @@ export default function Footer() {
                 </Row>
             </Section>
             <div className="col-12 copy" >
-                <p>Copyright © IncludeJr</p>
+                <p>Copyright © CoronaInfo</p>
             </div>
         </Row>
     );
