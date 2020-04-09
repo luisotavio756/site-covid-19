@@ -6,7 +6,12 @@ import {
     faAngleDoubleLeft,
     faAngleDoubleRight,
     faTimesCircle,
+    faCheckCircle,
+    faSortAmountDown,
+    faSortAmountUp,
+    faSearch
 } from "@fortawesome/free-solid-svg-icons";
+
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 import { Row, FeedItem, Search } from "./styles";
@@ -18,42 +23,56 @@ export default function IKnow() {
     const [feed, setFeed] = useState([]);
     const [total, setTotal] = useState(0);
     const [search, setSearch] = useState("");
-    const [order, setOrder] = useState("");
+    const [order, setOrder] = useState("ASC");
+    const [ count, setCount ] = useState(0);
 
-    const loadFeed = useCallback(
-        async (page = 1) => {
-            const { data } = await api.get(
-                `/needies?page=${page}&order=${order}&search=${search}`
-            );
+    // const loadFeed = useCallback(
+    //     async (page = 1) => {
+    //         const { data } = await api.get(
+    //             `/needies?page=${page}&order=${order}&search=${search}`
+    //         );
 
-            setFeed(data.needies);
-            setTotal(data.total);
-            setLoading(false);
-            setPage(page);
-            if (page !== 1) window.location.href = "#feed";
-        },
-        [order, search]
-    );
+    //         setFeed(data.needies);
+    //         setTotal(data.total);
+    //         setLoading(false);
+    //         setPage(page);
+    //         if (page !== 1) window.location.href = "#feed";
+    //     },
+    //     [order, search]
+    // );
+    async function loadFeed(page = 1) {
+        const { data } = await api.get(
+            `/needies?page=${page}&order=${order}`
+        );
 
-    // recarrega a página de acordo com o loadFeed agora
+        // await alert('kkkk');
+        await setFeed(data.needies);
+        await setTotal(data.total);
+        setPage(page);
+        setLoading(false);
+
+        // if (page !== 1) window.location.href = "#feed";
+    }
+
+    // Recarrega a página de acordo com o loadFeed agora
     useEffect(() => {
         setLoading(true);
+        setFeed([]);
         loadFeed();
-    }, [loadFeed]);
+        
+        // alert('kkkk');
+    }, [order]);
 
-    // previni o comportamento do a e seta a ordem
-    async function handleOrder(e, ord) {
+
+    // Previni o comportamento do a e seta a ordem
+    function handleOrder(e, ord) {
         e.preventDefault();
 
         setOrder(ord);
+        loadFeed(pageNow);
     }
 
-    // Previni o comportamento padrão do form
-    async function handleSearch(e) {
-        e.preventDefault();
-    }
-
-    async function prevPage() {
+    function prevPage() {
         setLoading(true);
         loadFeed(pageNow - 1);
     }
@@ -83,30 +102,33 @@ export default function IKnow() {
                                     href="!#"
                                     onClick={(e) => handleOrder(e, "DESC")}
                                 >
-                                    Mais recentes
+                                    <FontAwesomeIcon icon={faSortAmountUp} style={{ marginRight: 3 }}/> Mais recentes
                                 </a>{" "}
                                 |{" "}
                                 <a
                                     href="!#"
                                     onClick={(e) => handleOrder(e, "ASC")}
                                 >
-                                    Menos recentes
+                                    <FontAwesomeIcon icon={faSortAmountDown} style={{ marginRight: 3 }}/> Menos recentes
                                 </a>
                             </div>
-                            <form className="input" onSubmit={handleSearch}>
-                                <input
-                                    type="text"
-                                    placeholder="Pesquise por nome, cidade..."
-                                    onChange={(e) => setSearch(e.target.value)}
-                                    value={search}
-                                />
-                            </form>
+                            {/* <div className="input" onSubmit={(e) => e.preventDefault()}>
+                                <div className="input-icon">
+                                    <input
+                                        type="text"
+                                        placeholder="Pesquise por nome, cidade..."
+                                        onChange={(e) => setSearch(e.target.value)}
+                                        value={search}
+                                    />
+                                    <button disabled={search.length == 0} type="button" onClick={loadFeed(pageNow)}><FontAwesomeIcon icon={faSearch} /></button>
+                                </div>
+                            </div> */}
                         </div>
                     </Row>
                     <Row>
                         <div className="infos">
                             <div className="filters">
-                                Filtro ativo:{" "}
+                                <span>Filtro ativo:</span>{" "}
                                 {order === "ASC"
                                     ? "menos recentes"
                                     : "mais recentes"}{" "}
@@ -130,7 +152,7 @@ export default function IKnow() {
             </Row>
             <Row>
                 {loading && <div className="loader-more"></div>}
-                {total === 0 && (
+                {total === 0 && loading === false && (
                     <FeedItem>
                         <div className="info">
                             <h4 style={{ textAlign: "center" }}>
@@ -142,7 +164,7 @@ export default function IKnow() {
                     </FeedItem>
                 )}
                 {feed.map((item) => (
-                    <FeedItem key={item.needyName}>
+                    <FeedItem key={item.needyName} className={item.status === 1 ? 'helped' : ''}>
                         <div className="info">
                             <h4>{item.needyName}</h4>
                             <p>
@@ -174,6 +196,11 @@ export default function IKnow() {
                                 </p>
                             )}
                         </div>
+                        {item.status === 1 && 
+                            <div className="checked">
+                                <FontAwesomeIcon icon={faCheckCircle} style={{ marginRight: 3 }}/> Esta pessoa foi ajudada
+                            </div> 
+                        }
                     </FeedItem>
                 ))}
                 {total > 8 && (

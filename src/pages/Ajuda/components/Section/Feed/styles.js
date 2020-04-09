@@ -83,12 +83,40 @@ export const Search = styled.div`
 
     .filters-search {
         .filters {
-            font-size: 15px;
+            font-weight: bold;
+            font-size: 14px;
             text-align: center;
+            color: #333;
         }
+
+        .input {
+            .input-icon {
+                position: relative;
+            }
+
+            button {
+                cursor: pointer;
+                background: #5f04c8;
+                padding: 5px 10px;
+                border: none;
+                position: absolute;
+                top: 3.3px;
+                right: 3px;
+                border-radius: 5px;
+
+                svg {
+                    color: #fff;
+                }
+
+                &:disabled {
+                    opacity: 0.7;
+                }
+            }
+        }
+
         .input input {
             width: 18vw;
-            height: 42px;
+            height: 32px;
             font-size: 14px;
             color: rgb(102, 102, 102);
             border: 1px solid #999;
@@ -103,8 +131,15 @@ export const Search = styled.div`
     }
 
     .infos {
+        color: #5f04c8;
+
+        span {
+            color: rgb(102, 102, 102);;
+        }
+
         margin-top: 5px;
-        font-size: 14px;
+        font-size: 13px;
+
         .total {
             color: #666;
             font-weight: bold;
@@ -175,4 +210,16 @@ export const FeedItem = styled.div`
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     border-radius: 5px;
     padding: 15px;
+
+    &.helped {
+        opacity: 0.8;
+        border: 2px solid rgb(4, 211, 97);
+    }
+
+    .checked {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(4, 211, 97);
+    }
 `;

@@ -10,8 +10,8 @@ import { faUtensils, faHandHoldingUsd, faUsers } from '@fortawesome/free-solid-s
 export default function Banner() {
 
     const [ loading, setLoading ] = useState(false);
-    const [ confirmed, setConfirmed ] = useState(0);
-    const [ deaths, setDealths ] = useState(0);
+    const [ confirmed, setConfirmed ] = useState('437,5');
+    const [ deaths, setDealths ] = useState(35);
 
     useEffect(() => {
         // alert('kkkkk')
@@ -34,7 +34,7 @@ export default function Banner() {
         <BannerImg>
             <div className="text" id="text">
                 <h1>
-                    Não é preciso toque para estar junto
+                    "Não é preciso toque para estar junto"
                 </h1>
             </div>
             <p className="brasil">
@@ -43,7 +43,7 @@ export default function Banner() {
             { loading && <div className="loader-more" style={{ marginTop: 5}}></div>}
             { !loading && 
                 <div className="cases">
-                    {/* <div className="confirmed">
+                    <div className="confirmed">
                         <FontAwesomeIcon icon={faUtensils} /> 
                         <div className="text"> 
                             <h1>{ confirmed }</h1>
@@ -56,7 +56,7 @@ export default function Banner() {
                             <h1>{ deaths }</h1>
                             <p>famílias</p>
                         </div>
-                    </div> */}
+                    </div>
                     {/* <div className="dealths">
                         <FontAwesomeIcon icon={faUsers} /> 
                         <div className="text">
