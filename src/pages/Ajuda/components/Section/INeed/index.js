@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Import Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,6 +22,7 @@ export default function Feed() {
 
 
     const [ status, setStatus ] = useState(0);
+    const [ total, setTotal ] = useState(0);
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -60,6 +61,18 @@ export default function Feed() {
         }, 5000);
     }
 
+    async function loadTotal() {
+        const { data } = await api.get(
+            `/needies`
+        );
+
+        setTotal(data.total);
+    }
+
+    useEffect(() => {
+        loadTotal();
+    }, []);
+
     return (
         <div className="col-6 p-0" style={{ margin: '0 auto'}}>
             <Row>
@@ -68,6 +81,16 @@ export default function Feed() {
                     <div className="divider"></div>
                 </div>
             </Row>
+            {total >= 100 && 
+                <FormHelp onSubmit={handleSubmit}>
+                    <div className="section-form">
+                        <h2 style={{ textAlign: 'center'}}>Cadastro Encerrado !</h2>
+                        <p style={{ textAlign: 'center', color: '#666'}}>O limite de 100 pessoas foi excedido</p>
+                    </div>
+                </FormHelp>
+            
+            }
+            { total < 100 &&
             <FormHelp onSubmit={handleSubmit}>
                 { status == 1 && <div className="alert alert-success"><h4>Você foi cadastrado com sucesso em nosso feed de ajuda. Você pode ver clicando em "Feed de Ajuda". Obrigado <FontAwesomeIcon icon={faHeart} /></h4></div> }
                 { status == 2 && <div className="alert alert-danger"><h4>Não foi possível concluir o cadastro, verifique os campos ou tente novamente mais tarde <FontAwesomeIcon icon={faTimes} /></h4></div> }
@@ -104,6 +127,8 @@ export default function Feed() {
                 </div>
                 <button type="submit"><FontAwesomeIcon icon={faHeart} /> Pedir Ajuda</button>
             </FormHelp>
+            }
+            { total < 100 &&
             <Row style={{ marginTop: 10 }} >
                 <div className="col-12 share">
                     <p style={{ textAlign: 'center', fontSize: 14, color: '#666' }}>Ou</p>
@@ -113,6 +138,7 @@ export default function Feed() {
                     </a>
                 </div>
             </Row>
+            }
         </div>
     );
 }

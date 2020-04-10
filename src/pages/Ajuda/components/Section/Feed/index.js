@@ -23,35 +23,21 @@ export default function IKnow() {
     const [feed, setFeed] = useState([]);
     const [total, setTotal] = useState(0);
     const [search, setSearch] = useState("");
-    const [order, setOrder] = useState("ASC");
+    const [order, setOrder] = useState("");
     const [ count, setCount ] = useState(0);
 
-    // const loadFeed = useCallback(
-    //     async (page = 1) => {
-    //         const { data } = await api.get(
-    //             `/needies?page=${page}&order=${order}&search=${search}`
-    //         );
-
-    //         setFeed(data.needies);
-    //         setTotal(data.total);
-    //         setLoading(false);
-    //         setPage(page);
-    //         if (page !== 1) window.location.href = "#feed";
-    //     },
-    //     [order, search]
-    // );
     async function loadFeed(page = 1) {
         const { data } = await api.get(
             `/needies?page=${page}&order=${order}`
         );
 
-        // await alert('kkkk');
+
         await setFeed(data.needies);
-        await setTotal(data.total);
+        setTotal(data.total);
         setPage(page);
         setLoading(false);
 
-        // if (page !== 1) window.location.href = "#feed";
+        if (page !== 1) window.location.href = "#feed";
     }
 
     // Recarrega a página de acordo com o loadFeed agora
@@ -63,14 +49,6 @@ export default function IKnow() {
         // alert('kkkk');
     }, [order]);
 
-
-    // Previni o comportamento do a e seta a ordem
-    function handleOrder(e, ord) {
-        e.preventDefault();
-
-        setOrder(ord);
-        loadFeed(pageNow);
-    }
 
     function prevPage() {
         setLoading(true);
@@ -98,19 +76,19 @@ export default function IKnow() {
                     <Row>
                         <div className="filters-search">
                             <div className="filters">
-                                <a
-                                    href="!#"
-                                    onClick={(e) => handleOrder(e, "DESC")}
+                                <button
+                                    type="button"
+                                    onClick={(e) => setOrder("DESC")}
                                 >
                                     <FontAwesomeIcon icon={faSortAmountUp} style={{ marginRight: 3 }}/> Mais recentes
-                                </a>{" "}
+                                </button>{" "}
                                 |{" "}
-                                <a
-                                    href="!#"
-                                    onClick={(e) => handleOrder(e, "ASC")}
+                                <button
+                                    type="button"
+                                    onClick={(e) => setOrder("ASC")}
                                 >
                                     <FontAwesomeIcon icon={faSortAmountDown} style={{ marginRight: 3 }}/> Menos recentes
-                                </a>
+                                </button>
                             </div>
                             {/* <div className="input" onSubmit={(e) => e.preventDefault()}>
                                 <div className="input-icon">
@@ -131,17 +109,7 @@ export default function IKnow() {
                                 <span>Filtro ativo:</span>{" "}
                                 {order === "ASC"
                                     ? "menos recentes"
-                                    : "mais recentes"}{" "}
-                                <a
-                                    href="!#"
-                                    onClick={(e) => handleOrder(e, "DESC")}
-                                >
-                                    {order === "ASC" ? (
-                                        <FontAwesomeIcon icon={faTimesCircle} />
-                                    ) : (
-                                        ""
-                                    )}
-                                </a>
+                                    : "mais recentes"}
                             </div>
                             <div className="total">
                                 Total: <span>{total}</span>
@@ -152,6 +120,7 @@ export default function IKnow() {
             </Row>
             <Row>
                 {loading && <div className="loader-more"></div>}
+                
                 {total === 0 && loading === false && (
                     <FeedItem>
                         <div className="info">
@@ -203,7 +172,7 @@ export default function IKnow() {
                         }
                     </FeedItem>
                 ))}
-                {total > 8 && (
+                {total > 8 && loading === false && (
                     <div
                         className="col-12 p-0 pagination"
                         style={{

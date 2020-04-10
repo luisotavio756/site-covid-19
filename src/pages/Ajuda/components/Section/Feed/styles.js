@@ -83,10 +83,15 @@ export const Search = styled.div`
 
     .filters-search {
         .filters {
-            font-weight: bold;
-            font-size: 14px;
-            text-align: center;
-            color: #333;
+            button {
+                cursor: pointer;
+                background: transparent;
+                border: none;
+                font-weight: bold;
+                font-size: 14px;
+                text-align: center;
+                color: #333;
+            }
         }
 
         .input {

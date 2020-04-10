@@ -14,15 +14,15 @@ import Feed from "./Feed";
 import INeed from "./INeed";
 
 const array = [
-    {
-        id: "form",
-        name: "Posso Ajudar",
-        status: 1,
-    },
+    // {
+    //     id: "form",
+    //     name: "Posso Ajudar",
+    //     status: 1,
+    // },
     {
         id: "feed",
         name: "Feed de Ajuda",
-        status: 0,
+        status: 1,
     },
     {
         id: "iknow",
