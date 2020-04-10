@@ -47,7 +47,7 @@ export default function Navbar() {
                                     <li><a href="#cases" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Casos</a></li>
                                     <li><a href="#prevention" onClick={(e) => { SetNav(false); scrollToIdOnClick(e) }}>Sobre o Covid-19</a></li>
                                     <li><Link to="/parceiros" onClick={(e) =>  SetNav(false) }>Nossos Parceiros</Link></li>
-                                    <li className="route"><Link to="/ajudar" onClick={(e) =>  SetNav(false) }><FontAwesomeIcon icon={faHeart} /> Quero ajudar</Link></li>
+                                    <li className="route"><Link to="/ajudar" onClick={(e) =>  SetNav(false) }><FontAwesomeIcon icon={faHeart} /> Doações</Link></li>
                                 </>
                             }
                             { his == '/ajudar' && 
@@ -59,7 +59,7 @@ export default function Navbar() {
                             {
                                 his == '/parceiros' && 
                                     <>
-                                    <li className="route"><Link to="/ajudar" onClick={(e) =>  SetNav(false) }><FontAwesomeIcon icon={faHeart} /> Quero ajudar</Link></li>
+                                    <li className="route"><Link to="/ajudar" onClick={(e) =>  SetNav(false) }><FontAwesomeIcon icon={faHeart} /> Doações</Link></li>
                                     <li><Link to="/" onClick={(e) => SetNav(false) }>Voltar para Início</Link></li>
                                     </>
                             }
