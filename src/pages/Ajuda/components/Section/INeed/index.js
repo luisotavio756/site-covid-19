@@ -61,16 +61,19 @@ export default function Feed() {
         }, 5000);
     }
 
-    async function loadTotal() {
+    async function loadTotal(page = 1, order = '') {
         const { data } = await api.get(
-            `/needies`
+            `/needies?page=${page}&order=${order}`
         );
 
+        // alert(data);
         setTotal(data.total);
+        // alert(data);
     }
 
     useEffect(() => {
         loadTotal();
+        // alert(total)
     }, []);
 
     return (
