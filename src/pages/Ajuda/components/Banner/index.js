@@ -10,8 +10,8 @@ import { faUtensils, faHandHoldingUsd, faUsers } from '@fortawesome/free-solid-s
 export default function Banner() {
 
     const [ loading, setLoading ] = useState(false);
-    const [ confirmed, setConfirmed ] = useState('437,5');
-    const [ deaths, setDealths ] = useState(35);
+    const [ confirmed, setConfirmed ] = useState('565');
+    const [ deaths, setDealths ] = useState(45);
 
     useEffect(() => {
         // alert('kkkkk')
