@@ -4,14 +4,14 @@ import { BannerImg } from './styles';
 import api from '../../../../services/api';
 
 // Import Icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUtensils, faHandHoldingUsd, faUsers } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUtensils, faHandHoldingUsd, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 export default function Banner() {
 
     const [ loading, setLoading ] = useState(false);
-    const [ confirmed, setConfirmed ] = useState('565');
-    const [ deaths, setDealths ] = useState(45);
+    const [ confirmed, setConfirmed ] = useState('702,5');
+    const [ deaths, setDealths ] = useState(56);
 
     useEffect(() => {
         // alert('kkkkk')
