@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const api = axios.create({
-    baseURL: "https://api-coronainfo.herokuapp.com",
+    baseURL: "Your-API-Covid-data",
 });
 
 export default api;
