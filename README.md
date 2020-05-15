@@ -19,7 +19,6 @@ This project was developed in Personal Project join Flaviano, my friend, with th
 
 -  [ReactJS](https://pt-br.reactjs.org)
 -  [Node.js](https://nodejs.org)
--  [MongoDB](https://mongodb.com)
 -  [Styled Components](https://styled-components.com)
 -  [MongoDB](https://mongodb.com)
 
