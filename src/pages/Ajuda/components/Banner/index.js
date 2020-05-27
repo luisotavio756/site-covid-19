@@ -10,8 +10,8 @@ import { faUtensils, faHandHoldingUsd, faUsers } from '@fortawesome/free-solid-s
 export default function Banner() {
 
     const [ loading, setLoading ] = useState(false);
-    const [ confirmed, setConfirmed ] = useState('702,5');
-    const [ deaths, setDealths ] = useState(56);
+    const [ confirmed, setConfirmed ] = useState('1,1');
+    const [ deaths, setDealths ] = useState(89);
 
     useEffect(() => {
         // alert('kkkkk')
@@ -47,7 +47,7 @@ export default function Banner() {
                         <FontAwesomeIcon icon={faUtensils} /> 
                         <div className="text"> 
                             <h1>{ confirmed }</h1>
-                            <p>kg de alimentos</p>
+                            <p>Tone de alimentos</p>
                         </div>
                     </div>
                     <div className="dealths">
