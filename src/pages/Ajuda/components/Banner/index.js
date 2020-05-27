@@ -47,7 +47,7 @@ export default function Banner() {
                         <FontAwesomeIcon icon={faUtensils} /> 
                         <div className="text"> 
                             <h1>{ confirmed }</h1>
-                            <p>Tone de alimentos</p>
+                            <p>ton de alimentos</p>
                         </div>
                     </div>
                     <div className="dealths">
