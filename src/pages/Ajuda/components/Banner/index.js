@@ -10,8 +10,8 @@ import { faUtensils, faHandHoldingUsd, faUsers } from '@fortawesome/free-solid-s
 export default function Banner() {
 
     const [ loading, setLoading ] = useState(false);
-    const [ confirmed, setConfirmed ] = useState('1,1');
-    const [ deaths, setDealths ] = useState(89);
+    const [ confirmed, setConfirmed ] = useState('1,3');
+    const [ deaths, setDealths ] = useState(105);
 
     useEffect(() => {
         // alert('kkkkk')
@@ -27,7 +27,7 @@ export default function Banner() {
 
         // setLoading(true);
         // load();
-        
+
 
     }, []);
     return (
@@ -41,24 +41,24 @@ export default function Banner() {
                 {/* Números de arrecadação até o momento */}
             </p>
             { loading && <div className="loader-more" style={{ marginTop: 5}}></div>}
-            { !loading && 
+            { !loading &&
                 <div className="cases">
                     <div className="confirmed">
-                        <FontAwesomeIcon icon={faUtensils} /> 
-                        <div className="text"> 
+                        <FontAwesomeIcon icon={faUtensils} />
+                        <div className="text">
                             <h1>{ confirmed }</h1>
                             <p>ton de alimentos</p>
                         </div>
                     </div>
                     <div className="dealths">
-                        <FontAwesomeIcon icon={faUsers} /> 
+                        <FontAwesomeIcon icon={faUsers} />
                         <div className="text">
                             <h1>{ deaths }</h1>
                             <p>famílias</p>
                         </div>
                     </div>
                     {/* <div className="dealths">
-                        <FontAwesomeIcon icon={faUsers} /> 
+                        <FontAwesomeIcon icon={faUsers} />
                         <div className="text">
                             <h1>{ deaths }</h1>
                             <p>famílias ajudadas</p>
